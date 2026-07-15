@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>О студии Некрасов | История и подход</title>
+<meta name="description" content="Команда веб-дизайнеров и разработчиков из Донецка. Делаем сайты, которые растят бизнес с 2021 года.">
+<meta property="og:title" content="О студии Некрасов">
+<link rel="canonical" href="https://nekrasovstudio.com/about">
+<style>html,body{background:#05060e}</style>
+<script>document.addEventListener("mouseover",function(e){var a=e.target.closest&&e.target.closest('a[href$=".dc.html"]');if(a&&!a.__pf){a.__pf=1;var l=document.createElement("link");l.rel="prefetch";l.href=a.getAttribute("href");document.head.appendChild(l);}},{passive:true});</script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:#05060e}
+@keyframes nkPageIn{from{opacity:0}to{opacity:1}}
+body{animation:nkPageIn .4s ease both}
+.nk-cta,.wk-cta{background-image:linear-gradient(135deg,#1F50FF,#5CA7FF)!important;border-radius:100px!important}
+body{background:#05060e;-webkit-font-smoothing:antialiased}
+@keyframes nkRise{0%{opacity:0;transform:translateY(36px)}100%{opacity:1;transform:none}}
+@keyframes nkDrop{0%{opacity:0;transform:translateY(-22px)}100%{opacity:1;transform:none}}
+@keyframes nkHero{0%{opacity:0;transform:translateY(46px);filter:blur(12px)}100%{opacity:1;transform:none;filter:blur(0)}}
+.nk-has-cursor,.nk-has-cursor *{cursor:none!important}
+.nk-cursor-ring,.nk-cursor-dot{position:fixed;top:0;left:0;pointer-events:none;z-index:99999;border-radius:50%;opacity:0;will-change:transform}
+.nk-cursor-ring{width:36px;height:36px;border:1.5px solid #5CA7FF;box-shadow:0 0 18px rgba(92,167,255,.45);transition:opacity .35s ease,width .4s cubic-bezier(.34,1.56,.64,1),height .4s cubic-bezier(.34,1.56,.64,1),background .4s ease}
+.nk-cursor-dot{width:6px;height:6px;background:#5CA7FF;box-shadow:0 0 10px rgba(92,167,255,.7);transition:opacity .35s ease}
+.nk-cursor-ring.nk-cursor-hover{width:60px;height:60px;background:rgba(92,167,255,.1)}
+.g{background:linear-gradient(155deg,rgba(255,255,255,.07),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 8px 32px rgba(0,0,0,.22),inset 0 1px 1px rgba(255,255,255,.18);transform:translateZ(0)}
+.nk-cta{background-size:220% 100%!important;background-position:0% 50%!important;transition:transform .65s cubic-bezier(.33,1,.68,1),box-shadow .65s cubic-bezier(.33,1,.68,1),background-position .85s cubic-bezier(.22,.61,.36,1)!important}
+.nk-cta:hover{transform:translateY(-4px)!important;box-shadow:0 24px 58px rgba(31,80,255,.5)!important;background-position:100% 50%!important}
+.nk-shine{position:relative;overflow:hidden}
+.nk-shine::after{content:"";position:absolute;top:0;left:-130%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-18deg);transition:left .7s ease;pointer-events:none;z-index:2}
+.nk-shine:hover::after{left:140%}
+.nk-nav-links{display:flex}
+.nk-burger{display:none}
+.team-card{transition:transform .5s cubic-bezier(.33,1,.68,1),box-shadow .5s ease}
+.team-card:hover{transform:translateY(-5px);box-shadow:0 24px 60px rgba(31,80,255,.16)}
+.val-card{transition:border-color .5s,transform .5s cubic-bezier(.33,1,.68,1)}
+.val-card:hover{border-color:rgba(92,167,255,.35)!important;transform:translateY(-3px)}
+.nk-div{height:1px;background:rgba(255,255,255,.07)}
+@media(max-width:980px){.nk-nav-links{display:none!important}.nk-burger{display:flex!important}.nk-sticky-cta{display:flex!important}.about-hero{grid-template-columns:1fr!important}.about-2col{grid-template-columns:1fr!important}.team-grid{grid-template-columns:1fr 1fr!important}.cta-flex{flex-direction:column!important;align-items:stretch!important}}
+@media(max-width:600px){.team-grid{grid-template-columns:1fr!important}.stats-row{flex-wrap:wrap!important}}
+  @keyframes nkModalIn{0%{opacity:0;transform:scale(.95) translateY(24px)}100%{opacity:1;transform:none}}
+  @keyframes nkOverlIn{0%{opacity:0}100%{opacity:1}}
+  .nk-modal-wrap{position:fixed;inset:0;background:rgba(5,6,14,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);z-index:9998;display:flex;align-items:center;justify-content:center;padding:20px;animation:nkOverlIn .3s ease both}
+  .nk-modal-box{width:100%;max-width:560px;border-radius:36px;background:linear-gradient(155deg,rgba(255,255,255,.09),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 32px 80px rgba(0,0,0,.5),inset 0 1px 1px rgba(255,255,255,.2);padding:clamp(32px,4vw,52px);animation:nkModalIn .45s cubic-bezier(.16,.84,.34,1) .1s both}
+  .nk-mi{appearance:none;width:100%;background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.1);border-radius:14px;padding:15px 18px;font-family:Manrope;font-size:16px;color:#fff;outline:none;resize:none;transition:border-color .3s,background .3s}
+  .nk-mi:focus{border-color:rgba(92,167,255,.5);background:rgba(255,255,255,.09)}
+  .nk-mi::placeholder{color:rgba(255,255,255,.32)}
+</style>
+</helmet>
+
+<div ref="{{ rootRef }}" style="min-height:100vh;background:linear-gradient(180deg,#070a1a 0%,#05060e 28%,#060814 60%,#070a1c 100%);color:#fff;font-family:Manrope,sans-serif;overflow:clip;position:relative">
+  <div style="position:absolute;top:-300px;right:-300px;width:1000px;height:1000px;border-radius:50%;background:radial-gradient(closest-side,rgba(31,80,255,.3),transparent);filter:blur(30px);pointer-events:none"></div>
+  <div style="position:absolute;top:2800px;left:-250px;width:900px;height:900px;border-radius:50%;background:radial-gradient(closest-side,rgba(92,167,255,.2),transparent);filter:blur(30px);pointer-events:none"></div>
+  <div style="position:relative;z-index:2">
+
+  <sc-if value="{{ modalOpen }}" hint-placeholder-val="{{ false }}">
+    <div class="nk-modal-wrap" onClick="{{ onOverlayClick }}">
+      <div class="nk-modal-box" onClick="{{ stopProp }}" style="max-width:800px;padding:clamp(40px,4vw,60px)">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:clamp(30px,4vw,50px)">
+          <div>
+            <h2 style="font-family:Inter;font-weight:600;font-size:clamp(28px,3.6vw,48px);line-height:1.1;letter-spacing:-.02em;color:#fff">Обсудим ваш проект</h2>
+            <p style="margin-top:12px;max-width:480px;font-family:Manrope;font-size:clamp(14px,1.1vw,18px);line-height:1.5;color:rgba(223,223,223,.6)">Оставьте контакты, и мы свяжемся с вами в ближайшее время</p>
+          </div>
+          <button onClick="{{ closeModal }}" style="flex:0 0 auto;width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(255,255,255,.15);background:rgba(255,255,255,.05);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .3s" style-hover="background:rgba(255,255,255,.12)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+        </div>
+        <form onSubmit="{{ onModalSubmit }}" style="display:flex;flex-direction:column;gap:16px">
+          <input class="nk-mi" type="text" placeholder="Имя" value="{{ mName }}" onInput="{{ onMName }}" required=""></input>
+          <select class="nk-mi" value="{{ mSphere }}" onChange="{{ onMSphere }}" style="appearance:none;cursor:pointer">
+            <option value="" disabled="" style="background:#0a0e1c;color:rgba(255,255,255,.5)">Выберите сферу услуг</option>
+            <option value="Сайт с нуля" style="background:#0a0e1c;color:#fff">Сайт с нуля</option>
+            <option value="Редизайн сайта" style="background:#0a0e1c;color:#fff">Редизайн сайта</option>
+            <option value="SEO и продвижение" style="background:#0a0e1c;color:#fff">SEO и продвижение</option>
+            <option value="Другое" style="background:#0a0e1c;color:#fff">Другое</option>
+          </select>
+          <input class="nk-mi" type="tel" placeholder="Ваш номер" value="{{ mPhone }}" onInput="{{ onMPhone }}" inputmode="tel" required=""></input>
+          <textarea class="nk-mi" placeholder="Расскажите о вашем проекте" value="{{ mTask }}" onInput="{{ onMTask }}" rows="4" style="resize:vertical;min-height:100px"></textarea>
+          <div style="display:flex;gap:12px;padding-top:8px;border-top:1px solid rgba(255,255,255,.08)">
+            <a href="https://t.me/nekrasovstudio" target="_blank" rel="noopener" title="Telegram" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:rgba(31,80,255,.15);border:1.5px solid rgba(92,167,255,.3);text-decoration:none;transition:all .3s" style-hover="background:rgba(31,80,255,.3);border-color:rgba(92,167,255,.6)"><svg width="18" height="18" viewBox="0 0 24 24" fill="#5CA7FF"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.02-.14-.07-.2-.09-.06-.22-.04-.31-.02-.13.02-2.28 1.45-6.44 4.25-.61.41-1.16.61-1.66.6-.54-.01-1.6-.31-2.38-.57-.96-.3-1.72-.46-1.65-.97.03-.27.49-.55 1.35-.84 5.3-2.33 8.84-3.87 10.67-4.87.51-.29.96-.48 1.28-.48.26 0 .52.06.75.18z"/></svg></a>
+            <a href="https://www.instagram.com/nekrasovstudio" target="_blank" rel="noopener" title="Instagram" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:rgba(31,80,255,.15);border:1.5px solid rgba(92,167,255,.3);text-decoration:none;transition:all .3s" style-hover="background:rgba(31,80,255,.3);border-color:rgba(92,167,255,.6)"><svg width="18" height="18" viewBox="0 0 24 24" fill="#5CA7FF"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.057-1.645.069-4.849.069-3.204 0-3.584-.012-4.849-.069-3.259-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/></svg></a>
+            <a href="mailto:hello@nekrasovstudio.com" title="Email" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:rgba(31,80,255,.15);border:1.5px solid rgba(92,167,255,.3);text-decoration:none;transition:all .3s" style-hover="background:rgba(31,80,255,.3);border-color:rgba(92,167,255,.6)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5CA7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></a>
+          </div>
+          <label style="display:flex;align-items:flex-start;gap:10px;padding:14px;border-radius:12px;background:rgba(31,80,255,.08);border:1.5px solid {{ mAgreeBorder }};cursor:pointer;transition:border-color .3s">
+            <input type="checkbox" checked="{{ mAgree }}" onChange="{{ onMAgree }}" style="width:18px;height:18px;margin-top:2px;cursor:pointer;accent-color:#5CA7FF;flex:0 0 auto"></input>
+            <span style="font-family:Manrope;font-size:13px;line-height:1.5;color:rgba(255,255,255,.6);flex:1">Я даю согласие на обработку персональных данных и принимаю <a href="Политика конфиденциальности.dc.html" target="_blank" style="color:#5CA7FF;text-decoration:underline">Политику конфиденциальности</a> и <a href="Условия использования.dc.html" target="_blank" style="color:#5CA7FF;text-decoration:underline">Условия использования</a></span>
+          </label>
+          <sc-if value="{{ mAgreeErr }}" hint-placeholder-val="{{ false }}"><span style="display:block;margin-top:-8px;font-family:Manrope;font-size:13px;color:#ff6b6b">Необходимо согласие на обработку данных</span></sc-if>
+          <button type="submit" class="nk-shine nk-cta" style="margin-top:6px;font-family:Inter;font-weight:600;font-size:18px;color:#fff;cursor:pointer;padding:20px;border-radius:18px;border:none;background:linear-gradient(135deg,var(--nk-a1,#1F50FF),var(--nk-a2,#5CA7FF));box-shadow:0 14px 36px rgba(31,80,255,.36);transition:transform .2s,box-shadow .2s" style-hover="transform:translateY(-2px);box-shadow:0 18px 46px rgba(31,80,255,.5)">Обсудить проект</button>
+        </form>
+      </div>
+    </div>
+  </sc-if>
+
+    <header style="position:sticky;top:0;z-index:50;padding:clamp(14px,1.6vw,22px) clamp(16px,3vw,40px);animation:nkDrop 1s cubic-bezier(.16,.84,.34,1) both">
+      <div style="max-width:1840px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;position:relative">
+        <a href="Nekrasov Studio.dc.html" style="display:flex;align-items:center;text-decoration:none;background:rgba(14,14,17,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.08);border-radius:26px;padding:clamp(11px,1vw,15px) clamp(26px,2vw,40px);box-shadow:0 8px 30px rgba(0,0,0,.3)">
+          <span style="font-family:Unbounded;font-weight:700;font-size:clamp(15px,1.3vw,22px);line-height:.9;letter-spacing:-.05em;color:#fff;white-space:pre-line">Студия&#xa;НЕКРАСОВ</span>
+        </a>
+        <nav class="nk-nav-links" style="align-items:center;gap:clamp(22px,2vw,40px);background:rgba(14,14,17,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.08);border-radius:26px;padding:9px 9px 9px clamp(28px,2.4vw,48px);box-shadow:0 8px 30px rgba(0,0,0,.3)">
+          <sc-for list="{{ navLinks }}" as="lnk" hint-placeholder-count="5">
+            <a href="{{ lnk.h }}" style="font-family:Inter;font-weight:500;font-size:clamp(15px,1vw,20px);letter-spacing:-.01em;color:rgba(255,255,255,.82);text-decoration:none;transition:color .2s" style-hover="color:#fff">{{ lnk.t }}</a>
+          </sc-for>
+          <button onClick="{{ openModal }}" class="nk-shine nk-cta" style="display:inline-flex;align-items:center;justify-content:center;font-family:Inter;font-weight:500;font-size:clamp(15px,1vw,20px);color:#fff;padding:15px clamp(30px,2.4vw,50px);border-radius:22px;background:linear-gradient(126deg,#1F50FF 27%,#5CA7FF 125%);box-shadow:0 8px 24px rgba(31,80,255,.34);border:none;cursor:pointer">Заказать</button>
+        </nav>
+        <button class="nk-burger" onClick="{{ toggleMenu }}" style="flex-direction:column;gap:5px;width:54px;height:54px;align-items:center;justify-content:center;border-radius:20px;border:1px solid rgba(255,255,255,.1);background:rgba(14,14,17,.82);backdrop-filter:blur(16px);cursor:pointer">
+          <span style="display:block;width:22px;height:2px;background:#fff;border-radius:2px"></span>
+          <span style="display:block;width:22px;height:2px;background:#fff;border-radius:2px"></span>
+          <span style="display:block;width:22px;height:2px;background:#fff;border-radius:2px"></span>
+        </button>
+        <div style="{{ mobileMenuStyle }}">
+          <sc-for list="{{ navLinks }}" as="lnk" hint-placeholder-count="5">
+            <a href="{{ lnk.h }}" onClick="{{ closeMenu }}" style="font-family:Inter;font-weight:500;font-size:18px;color:rgba(255,255,255,.85);text-decoration:none;padding:13px 6px;border-bottom:1px solid rgba(255,255,255,.06)">{{ lnk.t }}</a>
+          </sc-for>
+          <button onClick="{{ openModal }}" class="nk-cta" style="margin-top:10px;text-align:center;width:100%;font-family:Inter;font-weight:600;font-size:17px;color:#fff;padding:15px;border-radius:16px;background:linear-gradient(135deg,#1F50FF,#5CA7FF);border:none;cursor:pointer">Заказать</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO SPLIT -->
+    <section class="about-hero" style="max-width:1640px;margin:0 auto;padding:clamp(60px,8vw,100px) clamp(20px,4vw,40px) clamp(60px,7vw,100px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,5vw,80px);align-items:center">
+      <div>
+        <span style="display:inline-flex;align-items:center;padding:8px 18px;border-radius:999px;background:rgba(31,80,255,.15);border:1px solid rgba(31,80,255,.4);font-family:Inter;font-weight:600;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:#9cc0ff;animation:nkRise .9s cubic-bezier(.16,.84,.34,1) .2s both">О студии</span>
+        <h1 style="font-family:Unbounded;font-weight:600;font-size:clamp(40px,6.5vw,96px);line-height:1.04;letter-spacing:-.02em;color:#fff;margin-top:24px;animation:nkHero 1.3s cubic-bezier(.16,.84,.34,1) .35s both">Делаем сайты,<br>которые <span style="background:linear-gradient(120deg,#1F50FF,#5CA7FF);-webkit-background-clip:text;background-clip:text;color:transparent">работают</span></h1>
+        <p style="font-family:Manrope;font-size:clamp(17px,1.5vw,21px);line-height:1.55;color:rgba(255,255,255,.65);margin-top:22px;max-width:580px;animation:nkRise 1.1s cubic-bezier(.16,.84,.34,1) .55s both">Студия Некрасов — небольшая команда с большим опытом. Основана в 2020 году в Донецке. Специализируемся на продающих сайтах для малого и среднего бизнеса.</p>
+        <div class="stats-row" style="display:flex;gap:clamp(28px,4vw,52px);margin-top:44px;animation:nkRise 1s cubic-bezier(.16,.84,.34,1) .7s both">
+          <div><div style="font-family:Unbounded;font-weight:700;font-size:clamp(40px,5vw,64px);line-height:1;background:linear-gradient(120deg,#1F50FF,#5CA7FF);-webkit-background-clip:text;background-clip:text;color:transparent">5+</div><div style="font-family:Manrope;font-size:clamp(14px,1.1vw,16px);color:rgba(255,255,255,.42);margin-top:4px">лет опыта</div></div>
+          <div><div style="font-family:Unbounded;font-weight:700;font-size:clamp(40px,5vw,64px);line-height:1;background:linear-gradient(120deg,#1F50FF,#5CA7FF);-webkit-background-clip:text;background-clip:text;color:transparent">40+</div><div style="font-family:Manrope;font-size:clamp(14px,1.1vw,16px);color:rgba(255,255,255,.42);margin-top:4px">проектов</div></div>
+          <div><div style="font-family:Unbounded;font-weight:700;font-size:clamp(40px,5vw,64px);line-height:1;background:linear-gradient(120deg,#1F50FF,#5CA7FF);-webkit-background-clip:text;background-clip:text;color:transparent">98%</div><div style="font-family:Manrope;font-size:clamp(14px,1.1vw,16px);color:rgba(255,255,255,.42);margin-top:4px">довольных</div></div>
+        </div>
+      </div>
+      <div style="border-radius:clamp(24px,2.6vw,36px);overflow:hidden;aspect-ratio:4/3">
+        <image-slot id="about_hero_photo" style="width:100%;height:100%" shape="rounded" radius="34" placeholder="Фото команды / офис студии"></image-slot>
+      </div>
+    </section>
+
+    <div class="nk-div" style="margin:0 clamp(20px,4vw,40px)"></div>
+
+    <!-- STORY + APPROACH -->
+    <section class="about-2col" style="max-width:1640px;margin:0 auto;padding:clamp(60px,7vw,96px) clamp(20px,4vw,40px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:start" data-reveal="">
+      <div>
+        <h2 style="font-family:Inter;font-weight:600;font-size:clamp(28px,3vw,46px);letter-spacing:-.01em;color:#fff">Наша история</h2>
+        <p style="font-family:Manrope;font-size:clamp(16px,1.3vw,19px);line-height:1.6;color:rgba(255,255,255,.65);margin-top:20px">Всё началось с небольшого проекта для местного кафе. Мы сделали сайт, который за первый месяц принёс заведению +40% броней. Это было доказательство: хороший сайт — это инвестиция, а не расход.</p>
+        <p style="font-family:Manrope;font-size:clamp(16px,1.3vw,19px);line-height:1.6;color:rgba(255,255,255,.65);margin-top:16px">С тех пор выросли в полноценную студию, сохранив главное: внимание к деталям и честный подход к работе. Сегодня 70% клиентов возвращаются за следующим проектом.</p>
+        <div class="g" style="border-radius:24px;padding:28px 32px;margin-top:32px">
+          <div style="font-family:Manrope;font-style:italic;font-size:clamp(16px,1.3vw,19px);line-height:1.55;color:rgba(255,255,255,.82)">«Мы не просто делаем сайты — мы решаем бизнес-задачи. Каждый проект начинается с вопроса: как это поможет вам зарабатывать?»</div>
+          <div style="font-family:Inter;font-weight:600;font-size:15px;color:rgba(255,255,255,.45);margin-top:14px">— Максим Некрасов, основатель</div>
+        </div>
+      </div>
+      <div>
+        <h2 style="font-family:Inter;font-weight:600;font-size:clamp(28px,3vw,46px);letter-spacing:-.01em;color:#fff">Наш подход</h2>
+        <div style="display:flex;flex-direction:column;gap:14px;margin-top:20px">
+          <div class="g val-card" style="border-radius:20px;padding:clamp(20px,2vw,28px);display:flex;gap:16px;align-items:flex-start;border:1px solid rgba(255,255,255,.12)">
+            <span style="width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#1F50FF,#5CA7FF);display:flex;align-items:center;justify-content:center;flex:0 0 auto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+            <div><div style="font-family:Inter;font-weight:600;font-size:clamp(16px,1.3vw,19px);color:#fff">Цели бизнеса — наш приоритет</div><div style="font-family:Manrope;font-size:clamp(14px,1.1vw,16px);color:rgba(255,255,255,.5);margin-top:4px">Делаем не «красивый» — а продающий сайт</div></div>
+          </div>
+          <div class="g val-card" style="border-radius:20px;padding:clamp(20px,2vw,28px);display:flex;gap:16px;align-items:flex-start;border:1px solid rgba(255,255,255,.12)">
+            <span style="width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#1F50FF,#5CA7FF);display:flex;align-items:center;justify-content:center;flex:0 0 auto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+            <div><div style="font-family:Inter;font-weight:600;font-size:clamp(16px,1.3vw,19px);color:#fff">Прозрачность на каждом шаге</div><div style="font-family:Manrope;font-size:clamp(14px,1.1vw,16px);color:rgba(255,255,255,.5);margin-top:4px">Всегда знаете, что происходит и что будет дальше</div></div>
+          </div>
+          <div class="g val-card" style="border-radius:20px;padding:clamp(20px,2vw,28px);display:flex;gap:16px;align-items:flex-start;border:1px solid rgba(255,255,255,.12)">
+            <span style="width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#1F50FF,#5CA7FF);display:flex;align-items:center;justify-content:center;flex:0 0 auto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+            <div><div style="font-family:Inter;font-weight:600;font-size:clamp(16px,1.3vw,19px);color:#fff">Долгосрочные отношения</div><div style="font-family:Manrope;font-size:clamp(14px,1.1vw,16px);color:rgba(255,255,255,.5);margin-top:4px">70% клиентов возвращаются за новыми проектами</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="nk-div" style="margin:0 clamp(20px,4vw,40px)"></div>
+
+    <!-- TEAM -->
+    <section style="max-width:1640px;margin:0 auto;padding:clamp(60px,7vw,96px) clamp(20px,4vw,40px)" data-reveal="">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:clamp(32px,3.5vw,52px);flex-wrap:wrap">
+        <h2 style="font-family:Inter;font-weight:600;font-size:clamp(28px,3.5vw,54px);letter-spacing:-.01em;color:#fff">Команда</h2>
+        <p style="font-family:Manrope;font-size:clamp(15px,1.2vw,18px);color:rgba(255,255,255,.5);max-width:400px;text-align:right">Небольшая, но сплочённая команда специалистов</p>
+      </div>
+      <div class="team-grid" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px">
+        <div class="team-card g" style="border-radius:28px;overflow:hidden;border:1px solid rgba(255,255,255,.12)">
+          <div style="aspect-ratio:1/1;overflow:hidden"><image-slot id="team_max" style="width:100%;height:100%" shape="rect" placeholder="Фото Максим Некрасов"></image-slot></div>
+          <div style="padding:clamp(20px,2vw,28px)">
+            <div style="font-family:Inter;font-weight:600;font-size:clamp(18px,1.5vw,22px);color:#fff">Максим Некрасов</div>
+            <div style="font-family:Manrope;font-size:clamp(14px,1.1vw,16px);color:rgba(255,255,255,.42);margin-top:4px">Основатель · Дизайнер</div>
+            <p style="font-family:Manrope;font-size:clamp(14px,1.1vw,16px);line-height:1.5;color:rgba(255,255,255,.55);margin-top:12px">5+ лет в веб-дизайне. Создал визуальный стиль для 40+ проектов.</p>
+          </div>
+        </div>
+        <div class="team-card g" style="border-radius:28px;overflow:hidden;border:1px solid rgba(255,255,255,.12)">
+          <div style="aspect-ratio:1/1;overflow:hidden"><image-slot id="team_dev" style="width:100%;height:100%" shape="rect" placeholder="Фото фронтенд-разработчика"></image-slot></div>
+          <div style="padding:clamp(20px,2vw,28px)">
+            <div style="font-family:Inter;font-weight:600;font-size:clamp(18px,1.5vw,22px);color:#fff">Александр</div>
+            <div style="font-family:Manrope;font-size:clamp(14px,1.1vw,16px);color:rgba(255,255,255,.42);margin-top:4px">Фронтенд-разработчик</div>
+            <p style="font-family:Manrope;font-size:clamp(14px,1.1vw,16px);line-height:1.5;color:rgba(255,255,255,.55);margin-top:12px">Специализируется на производительных сайтах и плавных анимациях.</p>
+          </div>
+        </div>
+        <div class="team-card g" style="border-radius:28px;overflow:hidden;border:1px solid rgba(255,255,255,.12)">
+          <div style="aspect-ratio:1/1;overflow:hidden"><image-slot id="team_seo" style="width:100%;height:100%" shape="rect" placeholder="Фото SEO-специалиста"></image-slot></div>
+          <div style="padding:clamp(20px,2vw,28px)">
+            <div style="font-family:Inter;font-weight:600;font-size:clamp(18px,1.5vw,22px);color:#fff">Наталья</div>
+            <div style="font-family:Manrope;font-size:clamp(14px,1.1vw,16px);color:rgba(255,255,255,.42);margin-top:4px">SEO-специалист</div>
+            <p style="font-family:Manrope;font-size:clamp(14px,1.1vw,16px);line-height:1.5;color:rgba(255,255,255,.55);margin-top:12px">Выводит сайты в топ. Работает с семантикой и техническим SEO.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="max-width:1640px;margin:0 auto;padding:0 clamp(20px,4vw,40px) clamp(80px,9vw,120px)" data-reveal="">
+      <div class="g" style="border-radius:clamp(28px,3vw,44px);padding:clamp(52px,6vw,88px) clamp(40px,6vw,88px)">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap">
+          <div>
+            <h2 style="font-family:Inter;font-weight:600;font-size:clamp(28px,3.5vw,54px);letter-spacing:-.01em;color:#fff">Давайте работать вместе</h2>
+            <p style="font-family:Manrope;font-size:clamp(16px,1.3vw,20px);color:rgba(255,255,255,.6);margin-top:14px;max-width:500px">Расскажите о задаче — и мы найдём лучшее решение для вашего бизнеса.</p>
+          </div>
+          <div class="cta-flex" style="display:flex;gap:16px;flex:0 0 auto;flex-wrap:wrap">
+            <a href="#" onClick="{{ openModal }}" class="nk-shine nk-cta" style="display:inline-flex;align-items:center;justify-content:center;font-family:Inter;font-weight:600;font-size:clamp(16px,1.4vw,20px);color:#fff;text-decoration:none;padding:clamp(20px,2vw,26px) clamp(44px,4.5vw,68px);border-radius:999px;background:linear-gradient(135deg,#1F50FF,#5CA7FF);box-shadow:0 14px 40px rgba(31,80,255,.4)">Обсудить проект</a>
+            <a href="Услуги.dc.html" style="display:inline-flex;align-items:center;justify-content:center;font-family:Inter;font-weight:500;font-size:clamp(16px,1.4vw,20px);color:rgba(255,255,255,.72);text-decoration:none;padding:clamp(20px,2vw,26px) clamp(44px,4.5vw,68px);border-radius:999px;border:1px solid rgba(255,255,255,.18);transition:border-color .4s,color .4s" style-hover="border-color:rgba(255,255,255,.4);color:#fff">Наши услуги</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <button class="nk-sticky-cta nk-shine" onClick="{{ openModal }}" style="display:none;position:fixed;left:16px;right:16px;bottom:16px;z-index:9985;align-items:center;justify-content:center;gap:8px;font-family:Inter;font-weight:600;font-size:17px;color:#fff;padding:17px;border-radius:18px;border:none;background:linear-gradient(135deg,var(--nk-a1,#1F50FF),var(--nk-a2,#5CA7FF));box-shadow:0 12px 34px rgba(31,80,255,.5);cursor:pointer">Обсудить проект</button>
+    <footer style="padding:clamp(24px,2.5vw,36px) clamp(20px,4vw,40px);border-top:1px solid rgba(255,255,255,.06);max-width:1640px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+      <span style="font-family:Manrope;font-size:14px;color:rgba(255,255,255,.28)">© 2026 Студия Некрасов</span>
+      <div style="display:flex;gap:24px">
+        <a href="Услуги.dc.html" style="font-family:Manrope;font-size:14px;color:rgba(255,255,255,.38);text-decoration:none;transition:color .3s" style-hover="color:rgba(255,255,255,.7)">Услуги</a>
+        <a href="Прайс.dc.html" style="font-family:Manrope;font-size:14px;color:rgba(255,255,255,.38);text-decoration:none;transition:color .3s" style-hover="color:rgba(255,255,255,.7)">Прайс</a>
+        <a href="#" onClick="{{ openModal }}" style="font-family:Manrope;font-size:14px;color:rgba(255,255,255,.38);text-decoration:none;transition:color .3s" style-hover="color:rgba(255,255,255,.7)">Контакты</a>
+      </div>
+    </footer>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  rootRef = React.createRef();
+  state = { menuOpen: false, modalOpen: false, mName: '', mPhone: '', mTask: '', mSphere: '', mSent: false, mAgree: false, mAgreeErr: false };
+
+  componentDidMount() {
+    this._io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if(!e.isIntersecting) return; e.target.style.opacity='1'; e.target.style.transform='none'; this._io.unobserve(e.target); });
+    }, { threshold: 0.07, rootMargin:'0px 0px -50px 0px' });
+    requestAnimationFrame(() => {
+      const root=this.rootRef.current; if(!root) return;
+      const revs=root.querySelectorAll('[data-reveal]');
+      revs.forEach((el)=>{ const p=el.parentElement; const idx=[...p.children].indexOf(el); const d=Math.min(idx*.09,.45); el.style.cssText+=';opacity:0;transform:translateY(40px);transition:opacity 1.2s cubic-bezier(.16,.84,.34,1) '+d+'s,transform 1.2s cubic-bezier(.16,.84,.34,1) '+d+'s'; this._io.observe(el); });
+      this._fb=setTimeout(()=>revs.forEach(el=>{el.style.opacity='1';el.style.transform='none';}),1600);
+    });
+    if(typeof window!=='undefined'&&window.matchMedia&&window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+      const ring=document.createElement('div'); ring.className='nk-cursor-ring';
+      const dot=document.createElement('div'); dot.className='nk-cursor-dot';
+      document.body.appendChild(ring); document.body.appendChild(dot);
+      document.documentElement.classList.add('nk-has-cursor'); this._curEls=[ring,dot];
+      let mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my,shown=false,last=null; const c=' translate(-50%,-50%)';
+      const mv=(e)=>{ mx=e.clientX;my=e.clientY;dot.style.transform='translate('+mx+'px,'+my+'px)'+c;if(!shown){shown=true;ring.style.opacity='1';dot.style.opacity='1';}const t=e.target&&e.target.closest?e.target.closest('a,button,input,image-slot'):null;if(t!==last){last=t;ring.classList.toggle('nk-cursor-hover',!!t);} };
+      const lv=()=>{shown=false;ring.style.opacity='0';dot.style.opacity='0';};
+      const loop=()=>{rx+=(mx-rx)*.18;ry+=(my-ry)*.18;ring.style.transform='translate('+rx+'px,'+ry+'px)'+c;this._raf=requestAnimationFrame(loop);};
+      window.addEventListener('mousemove',mv,{passive:true}); document.addEventListener('mouseleave',lv);
+      this._mv=mv; this._lv=lv; loop();
+    }
+    this._rsz=()=>this.forceUpdate(); window.addEventListener('resize',this._rsz);
+  }
+
+  componentWillUnmount() {
+    if(this._io) this._io.disconnect(); if(this._fb) clearTimeout(this._fb);
+    if(this._raf) cancelAnimationFrame(this._raf);
+    if(this._mv) window.removeEventListener('mousemove',this._mv);
+    if(this._lv) document.removeEventListener('mouseleave',this._lv);
+    if(this._curEls) this._curEls.forEach(el=>el.remove());
+    document.documentElement.classList.remove('nk-has-cursor');
+    window.removeEventListener('resize',this._rsz);
+  }
+
+  toggleMenu = () => this.setState((s)=>({menuOpen:!s.menuOpen}));
+  closeMenu = () => this.setState({menuOpen:false});
+
+  renderVals() {
+    const navLinks = [
+      {t:'Главная',h:'Nekrasov Studio.dc.html'},{t:'Услуги',h:'Услуги.dc.html'},
+      {t:'Портфолио',h:'Портфолио.dc.html'},{t:'О нас',h:'О нас.dc.html'},{t:'Прайс',h:'Прайс.dc.html'},
+      {t:'Блог',h:'Блог.dc.html'},
+    ];
+    const mobileMenuStyle = this.state.menuOpen
+      ? 'position:absolute;top:100%;left:0;right:0;margin-top:12px;padding:16px;border-radius:24px;background:rgba(14,14,17,.95);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(20px);display:flex;flex-direction:column;gap:6px;z-index:999'
+      : 'display:none';
+    const s = this.state;
+    const mv = { modalOpen:s.modalOpen, mName:s.mName, mPhone:s.mPhone, mTask:s.mTask, mBtnLabel:s.mSent?'✓ Отправлено!':'Отправить заявку', onMName:(e)=>this.setState({mName:e.target.value}), onMPhone:(e)=>this.setState({mPhone:e.target.value}), onMTask:(e)=>this.setState({mTask:e.target.value}), openModal:(e)=>{if(e&&e.preventDefault)e.preventDefault();this.setState({modalOpen:true,mSent:false});document.body.style.overflow='hidden';}, closeModal:()=>{this.setState({modalOpen:false});document.body.style.overflow='';}, onOverlayClick:(e)=>{if(e.target===e.currentTarget){this.setState({modalOpen:false});document.body.style.overflow='';}}, stopProp:(e)=>e.stopPropagation(), submitModal:()=>{const st=this.state;if(!st.mName.trim()||!st.mPhone.trim())return;this.setState({mSent:true});setTimeout(()=>{this.setState({modalOpen:false});document.body.style.overflow='';window.location.href='Спасибо.dc.html';},700);} };
+    return { rootRef:this.rootRef, navLinks, mobileMenuStyle, toggleMenu:this.toggleMenu, closeMenu:this.closeMenu, ...mv, onModalSubmit:(e)=>{if(e&&e.preventDefault)e.preventDefault();const st=this.state;if(!st.mName.trim()||!st.mPhone.trim())return;if(!st.mAgree){this.setState({mAgreeErr:true});return;}window.location.href='Спасибо.dc.html';}, mAgree:s.mAgree, mAgreeErr:s.mAgreeErr, mAgreeBorder:s.mAgreeErr?'#ff5470':'rgba(92,167,255,.15)', onMAgree:(e)=>this.setState({mAgree:e.target.checked,mAgreeErr:false}) };
+  }
+}
+</script>
+</body>
+</html>

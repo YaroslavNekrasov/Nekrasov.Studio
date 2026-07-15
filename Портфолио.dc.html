@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>html,body{background:#05060e}</style>
+<script>document.addEventListener("mouseover",function(e){var a=e.target.closest&&e.target.closest('a[href$=".dc.html"]');if(a&&!a.__pf){a.__pf=1;var l=document.createElement("link");l.rel="prefetch";l.href=a.getAttribute("href");document.head.appendChild(l);}},{passive:true});</script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;background:#05060e}
+  @keyframes nkPageIn{from{opacity:0}to{opacity:1}}
+  body{animation:nkPageIn .4s ease both}
+  .nk-cta,.wk-cta{background-image:linear-gradient(135deg,#1F50FF,#5CA7FF)!important;border-radius:100px!important}
+  body{background:#05060e;-webkit-font-smoothing:antialiased}
+  @keyframes wkRise{0%{opacity:0;transform:translateY(40px)}100%{opacity:1;transform:none}}
+  @keyframes wkDrop{0%{opacity:0;transform:translateY(-22px)}100%{opacity:1;transform:none}}
+  @keyframes wkHero{0%{opacity:0;transform:translateY(46px);filter:blur(12px)}100%{opacity:1;transform:none;filter:blur(0)}}
+  .wk-has-cursor,.wk-has-cursor *{cursor:none!important}
+  .wk-cur-ring,.wk-cur-dot{position:fixed;top:0;left:0;pointer-events:none;z-index:99999;border-radius:50%;opacity:0;will-change:transform}
+  .wk-cur-ring{width:36px;height:36px;border:1.5px solid #5CA7FF;box-shadow:0 0 18px rgba(92,167,255,.45);transition:opacity .35s ease,width .4s cubic-bezier(.34,1.56,.64,1),height .4s cubic-bezier(.34,1.56,.64,1),background .4s ease,border-color .4s ease}
+  .wk-cur-dot{width:6px;height:6px;background:#5CA7FF;box-shadow:0 0 10px rgba(92,167,255,.7);transition:opacity .35s ease}
+  .wk-cur-ring.wk-cur-hover{width:60px;height:60px;background:rgba(92,167,255,.1);border-color:#1F50FF}
+  [style*="backdrop-filter"]{transform:translateZ(0)}
+  .wk-cta{position:relative;background-size:220% 100%!important;background-position:0% 50%!important;transition:background-position .85s cubic-bezier(.22,.61,.36,1),transform .6s cubic-bezier(.34,1.4,.64,1),box-shadow .6s cubic-bezier(.22,.61,.36,1)!important}
+  .wk-cta:hover{background-position:100% 50%!important;transform:translateY(-4px)!important;box-shadow:0 24px 58px rgba(31,80,255,.5)!important}
+  .wk-shine{position:relative;overflow:hidden}
+  .wk-shine::after{content:"";position:absolute;top:0;left:-130%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-18deg);transition:left .65s ease;pointer-events:none;z-index:2}
+  .wk-shine:hover::after{left:140%}
+  .wk-pf-media{position:absolute;inset:0;transition:transform .7s cubic-bezier(.22,.61,.36,1)}
+  .wk-pf:hover .wk-pf-media{transform:scale(1.06)}
+  .wk-pf-cta{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:clamp(16px,1.4vw,22px) clamp(18px,1.6vw,24px);text-decoration:none;background:linear-gradient(to top,rgba(5,6,14,.94),rgba(5,6,14,.5) 62%,transparent);transform:translateY(101%);transition:transform .55s cubic-bezier(.22,.61,.36,1);z-index:4}
+  .wk-pf:hover .wk-pf-cta{transform:translateY(0)}
+  .wk-pf-cta b{font-family:Inter;font-weight:600;font-size:clamp(15px,1.1vw,19px);color:#fff}
+  .wk-pf-arrow{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;width:clamp(34px,3vw,40px);height:clamp(34px,3vw,40px);border-radius:50%;background:linear-gradient(135deg,#1F50FF,#5CA7FF);transition:transform .4s ease}
+  .wk-pf:hover .wk-pf-arrow{transform:translateX(3px)}
+  .wk-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,2vw,28px)}
+  @media(max-width:760px){.wk-grid{grid-template-columns:1fr!important}.wk-nav-links{display:none!important}.wk-burger{display:flex!important}.wk-sticky-cta{display:flex!important}}
+</style>
+</helmet>
+<div ref="{{ rootRef }}" style="--nk-a1:#1F50FF;--nk-a2:#5CA7FF;position:relative;min-height:100vh;background:linear-gradient(180deg,#070a1a 0%,#05060e 32%,#070a1c 100%);color:#fff;font-family:Manrope,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;overflow:clip">
+
+  <div style="position:absolute;top:-260px;left:50%;transform:translateX(-50%);width:1200px;height:820px;border-radius:50%;background:radial-gradient(closest-side,rgba(31,80,255,.34),rgba(31,80,255,0));filter:blur(30px);pointer-events:none"></div>
+
+  <sc-if value="{{ modalOpen }}" hint-placeholder-val="{{ false }}">
+    <div class="nk-modal-wrap" onClick="{{ onOverlayClick }}">
+      <div class="nk-modal-box" onClick="{{ stopProp }}" style="max-width:800px;padding:clamp(40px,4vw,60px)">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:28px">
+          <h2 style="font-family:Unbounded;font-weight:600;font-size:clamp(22px,2.4vw,30px);color:#fff;letter-spacing:-.01em">Заказать проект</h2>
+          <button onClick="{{ closeModal }}" style="width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(255,255,255,.15);background:rgba(255,255,255,.05);cursor:pointer;display:flex;align-items:center;justify-content:center;flex:0 0 auto;transition:background .3s" style-hover="background:rgba(255,255,255,.12)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <input class="nk-mi" type="text" placeholder="Ваше имя" value="{{ mName }}" onInput="{{ onMName }}" style=""></input>
+          <input class="nk-mi" type="tel" placeholder="Телефон или Telegram" value="{{ mPhone }}" onInput="{{ onMPhone }}" style=""></input>
+          <input class="nk-mi" type="text" placeholder="Расскажите о задаче" value="{{ mTask }}" onInput="{{ onMTask }}" style=""></input>
+          <div style="display:flex;gap:12px;padding-top:8px;border-top:1px solid rgba(255,255,255,.08)">
+            <a href="https://t.me/nekrasovstudio" target="_blank" rel="noopener" title="Telegram" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:rgba(31,80,255,.15);border:1.5px solid rgba(92,167,255,.3);text-decoration:none;transition:all .3s" style-hover="background:rgba(31,80,255,.3);border-color:rgba(92,167,255,.6)"><svg width="18" height="18" viewBox="0 0 24 24" fill="#5CA7FF"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.02-.14-.07-.2-.09-.06-.22-.04-.31-.02-.13.02-2.28 1.45-6.44 4.25-.61.41-1.16.61-1.66.6-.54-.01-1.6-.31-2.38-.57-.96-.3-1.72-.46-1.65-.97.03-.27.49-.55 1.35-.84 5.3-2.33 8.84-3.87 10.67-4.87.51-.29.96-.48 1.28-.48.26 0 .52.06.75.18z"/></svg></a>
+            <a href="https://www.instagram.com/nekrasovstudio" target="_blank" rel="noopener" title="Instagram" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:rgba(31,80,255,.15);border:1.5px solid rgba(92,167,255,.3);text-decoration:none;transition:all .3s" style-hover="background:rgba(31,80,255,.3);border-color:rgba(92,167,255,.6)"><svg width="18" height="18" viewBox="0 0 24 24" fill="#5CA7FF"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.057-1.645.069-4.849.069-3.204 0-3.584-.012-4.849-.069-3.259-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/></svg></a>
+            <a href="mailto:hello@nekrasovstudio.com" title="Email" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:rgba(31,80,255,.15);border:1.5px solid rgba(92,167,255,.3);text-decoration:none;transition:all .3s" style-hover="background:rgba(31,80,255,.3);border-color:rgba(92,167,255,.6)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5CA7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></a>
+          </div>
+          <label style="display:flex;align-items:flex-start;gap:10px;padding:14px;border-radius:12px;background:rgba(31,80,255,.08);border:1.5px solid {{ mAgreeBorder }};cursor:pointer;transition:border-color .3s">
+            <input type="checkbox" checked="{{ mAgree }}" onChange="{{ onMAgree }}" style="width:18px;height:18px;margin-top:2px;cursor:pointer;accent-color:#5CA7FF;flex:0 0 auto"></input>
+            <span style="font-family:Manrope;font-size:13px;line-height:1.5;color:rgba(255,255,255,.6);flex:1">Я даю согласие на обработку персональных данных и принимаю <a href="Политика конфиденциальности.dc.html" target="_blank" style="color:#5CA7FF;text-decoration:underline">Политику конфиденциальности</a> и <a href="Условия использования.dc.html" target="_blank" style="color:#5CA7FF;text-decoration:underline">Условия использования</a></span>
+          </label>
+          <sc-if value="{{ mAgreeErr }}" hint-placeholder-val="{{ false }}"><span style="display:block;font-family:Manrope;font-size:13px;color:#ff6b6b">Необходимо согласие на обработку данных</span></sc-if>
+        </div>
+        <button onClick="{{ onModalSubmit }}" class="wk-shine wk-cta" style="display:flex;align-items:center;justify-content:center;width:100%;margin-top:20px;font-family:Inter;font-weight:600;font-size:18px;color:#fff;padding:20px;border-radius:18px;background:linear-gradient(135deg,#1F50FF,#5CA7FF);box-shadow:0 14px 36px rgba(31,80,255,.4);border:none;cursor:pointer">{{ mBtnLabel }}</button>
+        <p style="font-family:Manrope;font-size:13px;color:rgba(255,255,255,.3);text-align:center;margin-top:14px">Отвечаем в течение 2 часов в рабочее время</p>
+      </div>
+    </div>
+  </sc-if>
+
+  <header class="wk-intro" style="position:sticky;top:0;z-index:50;padding:clamp(14px,1.6vw,22px) clamp(16px,3vw,40px);animation:wkDrop 1s cubic-bezier(.16,.84,.34,1) both">
+    <div style="max-width:1840px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;position:relative">
+      <a href="Nekrasov Studio.dc.html" style="display:flex;align-items:center;text-decoration:none;background:rgba(14,14,17,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.08);border-radius:26px;padding:clamp(11px,1vw,15px) clamp(26px,2vw,40px);box-shadow:0 8px 30px rgba(0,0,0,.3)">
+        <span style="font-family:Unbounded;font-weight:700;font-size:clamp(15px,1.3vw,22px);line-height:.9;letter-spacing:-.05em;color:#fff;white-space:pre-line">Студия
+НЕКРАСОВ</span>
+      </a>
+      <nav class="wk-nav-links" style="display:flex;align-items:center;gap:clamp(22px,2vw,40px);background:rgba(14,14,17,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.08);border-radius:26px;padding:9px 9px 9px clamp(28px,2.4vw,48px);box-shadow:0 8px 30px rgba(0,0,0,.3)">
+        <sc-for list="{{ navLinks }}" as="lnk" hint-placeholder-count="6">
+          <a href="{{ lnk.h }}" style="font-family:Inter;font-weight:500;font-size:clamp(15px,1vw,20px);letter-spacing:-.01em;color:rgba(255,255,255,.82);text-decoration:none;transition:color .2s" style-hover="color:#fff">{{ lnk.t }}</a>
+        </sc-for>
+        <button onClick="{{ openModal }}" class="wk-shine wk-cta" style="display:inline-flex;align-items:center;justify-content:center;font-family:Inter;font-weight:500;font-size:clamp(15px,1vw,20px);letter-spacing:-.02em;color:#fff;text-decoration:none;padding:15px clamp(30px,2.4vw,50px);border:none;cursor:pointer;box-shadow:0 8px 24px rgba(31,80,255,.34);transition:transform .2s,box-shadow .2s" style-hover="transform:translateY(-2px);box-shadow:0 12px 32px rgba(31,80,255,.55)">Заказать</button>
+      </nav>
+      <button class="wk-burger" onClick="{{ toggleMobileMenu }}" style="display:none;flex-direction:column;gap:5px;width:54px;height:54px;align-items:center;justify-content:center;border-radius:20px;border:1px solid rgba(255,255,255,.1);background:rgba(14,14,17,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);cursor:pointer">
+        <span style="display:block;width:22px;height:2px;background:#fff;border-radius:2px"></span>
+        <span style="display:block;width:22px;height:2px;background:#fff;border-radius:2px"></span>
+        <span style="display:block;width:22px;height:2px;background:#fff;border-radius:2px"></span>
+      </button>
+      <div style="{{ wkMobileMenuStyle }}">
+        <sc-for list="{{ navLinks }}" as="lnk" hint-placeholder-count="6">
+          <a href="{{ lnk.h }}" onClick="{{ closeMobileMenu }}" style="font-family:Inter;font-weight:500;font-size:18px;color:rgba(255,255,255,.85);text-decoration:none;padding:13px 6px;border-bottom:1px solid rgba(255,255,255,.06)">{{ lnk.t }}</a>
+        </sc-for>
+        <button onClick="{{ openModal }}" class="wk-cta" style="margin-top:10px;text-align:center;width:100%;font-family:Inter;font-weight:600;font-size:17px;color:#fff;padding:15px;border-radius:16px;background:linear-gradient(135deg,var(--nk-a1,#1F50FF),var(--nk-a2,#5CA7FF));border:none;cursor:pointer">Заказать</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section style="max-width:1640px;margin:0 auto;padding:clamp(50px,6vw,90px) clamp(20px,4vw,40px) clamp(20px,3vw,40px)">
+    <span style="display:inline-flex;align-items:center;padding:8px 16px;border-radius:999px;background:rgba(31,80,255,.16);border:1px solid rgba(31,80,255,.4);font-family:Inter;font-weight:600;font-size:clamp(12px,.9vw,14px);letter-spacing:.04em;text-transform:uppercase;color:#9cc0ff;animation:wkRise .9s cubic-bezier(.16,.84,.34,1) .2s both">Портфолио</span>
+    <h1 style="margin-top:clamp(18px,2vw,28px);font-family:Unbounded;font-weight:600;font-size:clamp(40px,6.5vw,96px);line-height:1.03;letter-spacing:-.02em;animation:wkHero 1.2s cubic-bezier(.16,.84,.34,1) .32s both">Наши работы</h1>
+    <p style="margin-top:clamp(20px,2.4vw,32px);max-width:760px;font-family:Manrope;font-size:clamp(16px,1.4vw,22px);line-height:1.5;color:rgba(255,255,255,.78);animation:wkRise 1s cubic-bezier(.16,.84,.34,1) .5s both">Проекты, которые помогают бизнесу расти: сайты, редизайны и интернет-магазины. Наведите на проект и откройте подробный кейс.</p>
+  </section>
+
+  <!-- GRID -->
+  <section style="max-width:1640px;margin:0 auto;padding:clamp(20px,3vw,40px) clamp(20px,4vw,40px) clamp(50px,6vw,90px)">
+    <div class="wk-grid">
+      <sc-for list="{{ projects }}" as="p" hint-placeholder-count="4">
+        <div data-reveal="">
+          <div class="wk-pf" style="position:relative;aspect-ratio:16/11;border-radius:clamp(20px,2vw,30px);overflow:hidden;background:rgba(14,14,17,.6);border:1px solid rgba(255,255,255,.08);box-shadow:0 16px 50px rgba(0,0,0,.32)">
+            <div class="wk-pf-media"><image-slot id="{{ p.coverId }}" style="width:100%;height:100%" shape="rounded" radius="30" placeholder="Обложка проекта"></image-slot></div>
+            <a class="wk-pf-cta" href="{{ p.href }}"><b>Открыть кейс</b><span class="wk-pf-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></span></a>
+          </div>
+          <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-top:clamp(14px,1.4vw,20px)">
+            <div>
+              <a href="{{ p.href }}" style="font-family:Unbounded;font-weight:600;font-size:clamp(20px,1.8vw,30px);letter-spacing:-.01em;color:#fff;text-decoration:none">{{ p.title }}</a>
+              <div style="margin-top:6px;font-family:Inter;font-weight:500;font-size:clamp(13px,1vw,16px);color:rgba(255,255,255,.5)">{{ p.category }}</div>
+            </div>
+            <a href="{{ p.href }}" style="flex:0 0 auto;font-family:Inter;font-weight:600;font-size:clamp(14px,1vw,16px);color:#5CA7FF;text-decoration:none;transition:color .3s" style-hover="color:#fff">Подробнее →</a>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="max-width:1640px;margin:0 auto;padding:0 clamp(20px,4vw,40px) clamp(70px,8vw,120px)">
+    <div data-reveal="" style="border-radius:clamp(28px,3vw,44px);padding:clamp(44px,5vw,80px) clamp(32px,5vw,80px);text-align:center;background:linear-gradient(155deg,rgba(255,255,255,.08),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 8px 32px rgba(0,0,0,.22),inset 0 1px 1px rgba(255,255,255,.18)">
+      <h2 style="font-family:Unbounded;font-weight:600;font-size:clamp(28px,3.6vw,56px);line-height:1.08;letter-spacing:-.02em;color:#fff">Хотите такой же результат?</h2>
+      <p style="margin:18px auto 0;max-width:560px;font-family:Manrope;font-size:clamp(15px,1.3vw,20px);line-height:1.55;color:rgba(255,255,255,.6)">Расскажите о задаче — обсудим, как сайт может помочь именно вашему бизнесу.</p>
+      <button onClick="{{ openModal }}" class="wk-shine wk-cta" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;margin-top:clamp(28px,3vw,40px);font-family:Inter;font-weight:600;font-size:clamp(16px,1.2vw,19px);color:#fff;padding:19px 40px;border-radius:18px;border:none;background:linear-gradient(135deg,#1F50FF,#5CA7FF);box-shadow:0 14px 36px rgba(31,80,255,.4);cursor:pointer">Обсудить проект</button>
+    </div>
+  </section>
+
+  <button class="wk-sticky-cta wk-shine" onClick="{{ openModal }}" style="display:none;position:fixed;left:16px;right:16px;bottom:16px;z-index:9985;align-items:center;justify-content:center;gap:8px;font-family:Inter;font-weight:600;font-size:17px;color:#fff;padding:17px;border-radius:18px;border:none;background:linear-gradient(135deg,var(--nk-a1,#1F50FF),var(--nk-a2,#5CA7FF));box-shadow:0 12px 34px rgba(31,80,255,.5);cursor:pointer">Обсудить проект</button>
+
+  <footer style="padding:clamp(24px,2.5vw,36px) clamp(20px,4vw,40px);border-top:1px solid rgba(255,255,255,.06);max-width:1640px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+    <span style="font-family:Manrope;font-size:14px;color:rgba(255,255,255,.28)">© 2026 Студия Некрасов</span>
+    <div style="display:flex;gap:20px;flex-wrap:wrap">
+      <a href="Политика конфиденциальности.dc.html" style="font-family:Inter;font-size:14px;color:rgba(255,255,255,.5);text-decoration:none;transition:color .3s" style-hover="color:#5CA7FF">Политика конфиденциальности</a>
+      <a href="Условия использования.dc.html" style="font-family:Inter;font-size:14px;color:rgba(255,255,255,.5);text-decoration:none;transition:color .3s" style-hover="color:#5CA7FF">Условия использования</a>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  rootRef = React.createRef();
+  state = { mobileMenuOpen: false, modalOpen: false, mName: '', mPhone: '', mTask: '', mSent: false, mAgree: false, mAgreeErr: false };
+
+  componentDidMount() {
+    this.initCursor();
+    this._io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) this._reveal(e.target); });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    this._reveal = (el) => {
+      if (el.dataset.shown) return;
+      el.dataset.shown = '1';
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+      if (this._io) this._io.unobserve(el);
+    };
+    requestAnimationFrame(() => {
+      const root = this.rootRef.current;
+      if (!root) return;
+      const reveals = root.querySelectorAll('[data-reveal]');
+      reveals.forEach((el) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(40px)';
+        el.style.transition = 'opacity 1s cubic-bezier(.16,.84,.34,1), transform 1s cubic-bezier(.16,.84,.34,1)';
+        this._io.observe(el);
+      });
+      const check = () => {
+        const vh = window.innerHeight || 800;
+        reveals.forEach((el) => {
+          const r = el.getBoundingClientRect();
+          if (r.top < vh * 0.92 && r.bottom > 0) this._reveal(el);
+        });
+      };
+      check();
+      this._scrollCheck = check;
+      window.addEventListener('scroll', check, { passive: true });
+      this._fallback = setTimeout(() => reveals.forEach((el) => this._reveal(el)), 1200);
+    });
+  }
+
+  initCursor() {
+    if (typeof window === 'undefined') return;
+    const fine = window.matchMedia && window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+    if (!fine) return;
+    const ring = document.createElement('div'); ring.className = 'wk-cur-ring';
+    const dot = document.createElement('div'); dot.className = 'wk-cur-dot';
+    document.body.appendChild(ring); document.body.appendChild(dot);
+    document.documentElement.classList.add('wk-has-cursor');
+    this._curEls = [ring, dot];
+    let mx = innerWidth / 2, my = innerHeight / 2, rx = mx, ry = my, shown = false, last = null;
+    const c = ' translate(-50%,-50%)';
+    const move = (e) => {
+      mx = e.clientX; my = e.clientY;
+      dot.style.transform = 'translate(' + mx + 'px,' + my + 'px)' + c;
+      if (!shown) { shown = true; ring.style.opacity = '1'; dot.style.opacity = '1'; }
+      const t = e.target && e.target.closest ? e.target.closest('a,button,image-slot') : null;
+      if (t !== last) { last = t; ring.classList.toggle('wk-cur-hover', !!t); }
+    };
+    const leave = () => { shown = false; ring.style.opacity = '0'; dot.style.opacity = '0'; };
+    const loop = () => { rx += (mx - rx) * 0.18; ry += (my - ry) * 0.18; ring.style.transform = 'translate(' + rx + 'px,' + ry + 'px)' + c; this._curRaf = requestAnimationFrame(loop); };
+    window.addEventListener('mousemove', move, { passive: true });
+    document.addEventListener('mouseleave', leave);
+    window.addEventListener('blur', leave);
+    this._curMove = move; this._curLeave = leave;
+    loop();
+  }
+
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+    if (this._scrollCheck) window.removeEventListener('scroll', this._scrollCheck);
+    if (this._fallback) clearTimeout(this._fallback);
+    if (this._curRaf) cancelAnimationFrame(this._curRaf);
+    if (this._curMove) window.removeEventListener('mousemove', this._curMove);
+    if (this._curLeave) { document.removeEventListener('mouseleave', this._curLeave); window.removeEventListener('blur', this._curLeave); }
+    if (this._curEls) this._curEls.forEach((el) => el.remove());
+    document.documentElement.classList.remove('wk-has-cursor');
+  }
+
+  toggleMobileMenu = () => this.setState((s) => ({ mobileMenuOpen: !s.mobileMenuOpen }));
+  closeMobileMenu = () => this.setState({ mobileMenuOpen: false });
+
+  renderVals() {
+    const s = this.state;
+    const projectDefs = [
+      { id: 1, title: 'Кафе «Грин»', category: 'Лендинг · 2025' },
+      { id: 2, title: 'АвтоПлюс', category: 'Корпоративный сайт · 2025' },
+      { id: 3, title: 'ТехноДом', category: 'Интернет-магазин · 2024' },
+      { id: 4, title: 'Студия Йоги', category: 'Сайт-визитка · 2024' },
+    ];
+    const projects = projectDefs.map((p) => ({
+      title: p.title,
+      category: p.category,
+      coverId: 'pf' + p.id + '_cover',
+      href: 'Работа.dc.html?id=' + p.id,
+    }));
+
+    const navLinks = [{ t: 'Главная', h: 'Nekrasov Studio.dc.html' }, { t: 'Услуги', h: 'Услуги.dc.html' }, { t: 'Портфолио', h: 'Портфолио.dc.html' }, { t: 'О нас', h: 'О нас.dc.html' }, { t: 'Прайс', h: 'Прайс.dc.html' }, { t: 'Блог', h: 'Блог.dc.html' }];
+    const wkMobileMenuStyle = s.mobileMenuOpen
+      ? 'position:absolute;top:100%;left:0;right:0;margin-top:12px;padding:16px;border-radius:24px;background:rgba(14,14,17,.95);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(20px);display:flex;flex-direction:column;gap:6px;z-index:999'
+      : 'display:none';
+
+    return {
+      rootRef: this.rootRef,
+      projects, navLinks, wkMobileMenuStyle,
+      toggleMobileMenu: this.toggleMobileMenu, closeMobileMenu: this.closeMobileMenu,
+      modalOpen: s.modalOpen, mName: s.mName, mPhone: s.mPhone, mTask: s.mTask,
+      mBtnLabel: s.mSent ? '✓ Отправлено!' : 'Отправить заявку',
+      mAgree: s.mAgree, mAgreeErr: s.mAgreeErr, mAgreeBorder: s.mAgreeErr ? '#ff5470' : 'rgba(92,167,255,.15)',
+      onMName: (e) => this.setState({ mName: e.target.value }),
+      onMPhone: (e) => this.setState({ mPhone: e.target.value }),
+      onMTask: (e) => this.setState({ mTask: e.target.value }),
+      onMAgree: (e) => this.setState({ mAgree: e.target.checked, mAgreeErr: false }),
+      openModal: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ modalOpen: true, mSent: false }); document.body.style.overflow = 'hidden'; },
+      closeModal: () => { this.setState({ modalOpen: false }); document.body.style.overflow = ''; },
+      onOverlayClick: (e) => { if (e.target === e.currentTarget) { this.setState({ modalOpen: false }); document.body.style.overflow = ''; } },
+      stopProp: (e) => e.stopPropagation(),
+      onModalSubmit: (e) => { if (e && e.preventDefault) e.preventDefault(); const st = this.state; if (!st.mName.trim() || !st.mPhone.trim()) return; if (!st.mAgree) { this.setState({ mAgreeErr: true }); return; } window.location.href = 'Спасибо.dc.html'; },
+    };
+  }
+}
+</script>
+</body>
+</html>
