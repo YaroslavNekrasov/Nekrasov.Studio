@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Почему скорость загрузки влияет на продажи | Блог Студии Некрасов</title>
+<meta name="description" content="Когда вы в последний раз уходили с сайта, потому что он долго грузился? По данным Google, 53% мобильных пользователей покидают страницу, если она грузится дольше 3 секунд.">
+<meta property="og:title" content="Почему скорость загрузки влияет на продажи | Студия Некрасов">
+<meta property="og:description" content="Статья о том, как скорость сайта влияет на конверсию и продажи.">
+<link rel="canonical" href="https://nekrasovstudio.com/article.html?id=1">
+<style>html,body{background:#05060e}</style>
+<script>document.addEventListener("mouseover",function(e){var a=e.target.closest&&e.target.closest('a[href$=".html"]');if(a&&!a.__pf){a.__pf=1;var l=document.createElement("link");l.rel="prefetch";l.href=a.getAttribute("href");document.head.appendChild(l);}},{passive:true});</script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:#05060e}
+@keyframes nkPageIn{from{opacity:0}to{opacity:1}}
+body{animation:nkPageIn .4s ease both}
+.nk-cta,.wk-cta{background-image:linear-gradient(135deg,#1F50FF,#5CA7FF)!important;border-radius:100px!important}
+body{background:#05060e;-webkit-font-smoothing:antialiased}
+@keyframes nkRise{0%{opacity:0;transform:translateY(36px)}100%{opacity:1;transform:none}}
+@keyframes nkDrop{0%{opacity:0;transform:translateY(-22px)}100%{opacity:1;transform:none}}
+@keyframes nkHero{0%{opacity:0;transform:translateY(46px);filter:blur(12px)}100%{opacity:1;transform:none;filter:blur(0)}}
+.nk-has-cursor,.nk-has-cursor *{cursor:none!important}
+.nk-cursor-ring,.nk-cursor-dot{position:fixed;top:0;left:0;pointer-events:none;z-index:99999;border-radius:50%;opacity:0;will-change:transform}
+.nk-cursor-ring{width:36px;height:36px;border:1.5px solid #5CA7FF;box-shadow:0 0 18px rgba(92,167,255,.45);transition:opacity .35s ease,width .4s cubic-bezier(.34,1.56,.64,1),height .4s cubic-bezier(.34,1.56,.64,1),background .4s ease}
+.nk-cursor-dot{width:6px;height:6px;background:#5CA7FF;box-shadow:0 0 10px rgba(92,167,255,.7);transition:opacity .35s ease}
+.nk-cursor-ring.nk-cursor-hover{width:60px;height:60px;background:rgba(92,167,255,.1)}
+.g{background:linear-gradient(155deg,rgba(255,255,255,.07),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 8px 32px rgba(0,0,0,.22),inset 0 1px 1px rgba(255,255,255,.18);transform:translateZ(0)}
+.nk-cta{background-size:220% 100%!important;background-position:0% 50%!important;transition:transform .65s cubic-bezier(.33,1,.68,1),box-shadow .65s cubic-bezier(.33,1,.68,1),background-position .85s cubic-bezier(.22,.61,.36,1)!important}
+.nk-cta:hover{transform:translateY(-4px)!important;box-shadow:0 24px 58px rgba(31,80,255,.5)!important;background-position:100% 50%!important}
+.nk-shine{position:relative;overflow:hidden}
+.nk-shine::after{content:"";position:absolute;top:0;left:-130%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-18deg);transition:left .7s ease;pointer-events:none;z-index:2}
+.nk-shine:hover::after{left:140%}
+.nk-nav-links{display:flex}
+.nk-burger{display:none}
+.art-body-grid{display:grid;grid-template-columns:1fr clamp(290px,26vw,390px);gap:clamp(40px,5vw,72px);align-items:flex-start}
+.rel-card{transition:transform .5s cubic-bezier(.33,1,.68,1),box-shadow .5s}
+.rel-card:hover{transform:translateY(-5px);box-shadow:0 20px 50px rgba(31,80,255,.15)}
+@media(max-width:980px){.nk-nav-links{display:none!important}.nk-burger{display:flex!important}.nk-sticky-cta{display:flex!important}.art-body-grid{grid-template-columns:1fr!important}.sidebar{position:static!important}.rel-grid{grid-template-columns:1fr 1fr!important}}
+@media(max-width:600px){.rel-grid{grid-template-columns:1fr!important}}
+  @keyframes nkModalIn{0%{opacity:0;transform:scale(.95) translateY(24px)}100%{opacity:1;transform:none}}
+  @keyframes nkOverlIn{0%{opacity:0}100%{opacity:1}}
+  .nk-modal-wrap{position:fixed;inset:0;background:rgba(5,6,14,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);z-index:9998;display:flex;align-items:center;justify-content:center;padding:20px;animation:nkOverlIn .3s ease both}
+  .nk-modal-box{width:100%;max-width:560px;border-radius:36px;background:linear-gradient(155deg,rgba(255,255,255,.09),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 32px 80px rgba(0,0,0,.5),inset 0 1px 1px rgba(255,255,255,.2);padding:clamp(32px,4vw,52px);animation:nkModalIn .45s cubic-bezier(.16,.84,.34,1) .1s both}
+  .nk-mi{appearance:none;width:100%;background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.1);border-radius:14px;padding:15px 18px;font-family:Manrope;font-size:16px;color:#fff;outline:none;resize:none;transition:border-color .3s,background .3s}
+  .nk-mi:focus{border-color:rgba(92,167,255,.5);background:rgba(255,255,255,.09)}
+  .nk-mi::placeholder{color:rgba(255,255,255,.32)}
+</style>
+</helmet>
+
+<div ref="{{ rootRef }}" style="min-height:100vh;background:linear-gradient(180deg,#070a1a 0%,#05060e 28%,#060814 60%,#070a1c 100%);color:#fff;font-family:Manrope,sans-serif;overflow:clip;position:relative">
+  <div style="position:absolute;top:-260px;left:50%;transform:translateX(-50%);width:1000px;height:700px;border-radius:50%;background:radial-gradient(closest-side,rgba(31,80,255,.28),transparent);filter:blur(30px);pointer-events:none"></div>
+  <div style="position:relative;z-index:2">
+
+  <sc-if value="{{ modalOpen }}" hint-placeholder-val="{{ false }}">
+    <div class="nk-modal-wrap" onClick="{{ onOverlayClick }}">
+      <div class="nk-modal-box" onClick="{{ stopProp }}" style="max-width:800px;padding:clamp(40px,4vw,60px)">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:28px">
+          <h2 style="font-family:Unbounded;font-weight:600;font-size:clamp(22px,2.4vw,30px);color:#fff;letter-spacing:-.01em">Заказать проект</h2>
+          <button onClick="{{ closeModal }}" style="width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(255,255,255,.15);background:rgba(255,255,255,.05);cursor:pointer;display:flex;align-items:center;justify-content:center;flex:0 0 auto;transition:background .3s" style-hover="background:rgba(255,255,255,.12)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <input class="nk-mi" type="text" placeholder="Ваше имя" value="{{ mName }}" onInput="{{ onMName }}" style=""></input>
+          <input class="nk-mi" type="tel" placeholder="Телефон или Telegram" value="{{ mPhone }}" onInput="{{ onMPhone }}" style=""></input>
+          <input class="nk-mi" type="text" placeholder="Расскажите о задаче" value="{{ mTask }}" onInput="{{ onMTask }}" style=""></input>
+          <div style="display:flex;gap:12px;padding-top:8px;border-top:1px solid rgba(255,255,255,.08)">
+            <a href="https://t.me/nekrasovstudio" target="_blank" rel="noopener" title="Telegram" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:rgba(31,80,255,.15);border:1.5px solid rgba(92,167,255,.3);text-decoration:none;transition:all .3s" style-hover="background:rgba(31,80,255,.3);border-color:rgba(92,167,255,.6)"><svg width="18" height="18" viewBox="0 0 24 24" fill="#5CA7FF"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.02-.14-.07-.2-.09-.06-.22-.04-.31-.02-.13.02-2.28 1.45-6.44 4.25-.61.41-1.16.61-1.66.6-.54-.01-1.6-.31-2.38-.57-.96-.3-1.72-.46-1.65-.97.03-.27.49-.55 1.35-.84 5.3-2.33 8.84-3.87 10.67-4.87.51-.29.96-.48 1.28-.48.26 0 .52.06.75.18z"/></svg></a>
+            <a href="https://www.instagram.com/nekrasovstudio" target="_blank" rel="noopener" title="Instagram" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:rgba(31,80,255,.15);border:1.5px solid rgba(92,167,255,.3);text-decoration:none;transition:all .3s" style-hover="background:rgba(31,80,255,.3);border-color:rgba(92,167,255,.6)"><svg width="18" height="18" viewBox="0 0 24 24" fill="#5CA7FF"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.057-1.645.069-4.849.069-3.204 0-3.584-.012-4.849-.069-3.259-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/></svg></a>
+            <a href="mailto:hello@nekrasovstudio.com" title="Email" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:rgba(31,80,255,.15);border:1.5px solid rgba(92,167,255,.3);text-decoration:none;transition:all .3s" style-hover="background:rgba(31,80,255,.3);border-color:rgba(92,167,255,.6)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5CA7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></a>
+          </div>
+          <label style="display:flex;align-items:flex-start;gap:10px;padding:14px;border-radius:12px;background:rgba(31,80,255,.08);border:1.5px solid {{ mAgreeBorder }};cursor:pointer;transition:border-color .3s">
+            <input type="checkbox" checked="{{ mAgree }}" onChange="{{ onMAgree }}" style="width:18px;height:18px;margin-top:2px;cursor:pointer;accent-color:#5CA7FF;flex:0 0 auto"></input>
+<span style="font-family:Manrope;font-size:13px;line-height:1.5;color:rgba(255,255,255,.6);flex:1">Я даю отдельное согласие на обработку персональных данных в соответствии с <a href="privacy-policy.html" target="_blank" style="color:#5CA7FF;text-decoration:underline">Политикой обработки персональных данных</a>. <a href="terms.html" target="_blank" style="color:#5CA7FF;text-decoration:underline">Условия использования</a> размещены отдельно.</span>
+          </label>
+          <sc-if value="{{ mAgreeErr }}" hint-placeholder-val="{{ false }}"><span style="display:block;font-family:Manrope;font-size:13px;color:#ff6b6b">Необходимо согласие на обработку данных</span></sc-if>
+        </div>
+        <button onClick="{{ onModalSubmit }}" class="nk-shine nk-cta" style="display:flex;align-items:center;justify-content:center;width:100%;margin-top:20px;font-family:Inter;font-weight:600;font-size:18px;color:#fff;padding:20px;border-radius:18px;background:linear-gradient(135deg,#1F50FF,#5CA7FF);box-shadow:0 14px 36px rgba(31,80,255,.4);border:none;cursor:pointer">{{ mBtnLabel }}</button>
+        <p style="font-family:Manrope;font-size:13px;color:rgba(255,255,255,.3);text-align:center;margin-top:14px">Отвечаем в течение 2 часов в рабочее время</p>
+      </div>
+    </div>
+  </sc-if>
+
+    <header style="position:sticky;top:0;z-index:50;padding:clamp(14px,1.6vw,22px) clamp(16px,3vw,40px);animation:nkDrop 1s cubic-bezier(.16,.84,.34,1) both">
+<div style="max-width:1640px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;position:relative">
+        <a href="index.html" style="display:flex;align-items:center;text-decoration:none;background:rgba(14,14,17,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.08);border-radius:26px;padding:clamp(11px,1vw,15px) clamp(26px,2vw,40px);box-shadow:0 8px 30px rgba(0,0,0,.3)">
+          <span style="font-family:Unbounded;font-weight:700;font-size:clamp(15px,1.3vw,22px);line-height:.9;letter-spacing:-.05em;color:#fff;white-space:pre-line">Студия&#xa;НЕКРАСОВ</span>
+        </a>
+        <nav class="nk-nav-links" style="align-items:center;gap:clamp(22px,2vw,40px);background:rgba(14,14,17,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.08);border-radius:26px;padding:9px 9px 9px clamp(28px,2.4vw,48px);box-shadow:0 8px 30px rgba(0,0,0,.3)">
+          <sc-for list="{{ navLinks }}" as="lnk" hint-placeholder-count="5">
+            <a href="{{ lnk.h }}" style="font-family:Inter;font-weight:500;font-size:clamp(15px,1vw,20px);letter-spacing:-.01em;color:rgba(255,255,255,.82);text-decoration:none;transition:color .2s" style-hover="color:#fff">{{ lnk.t }}</a>
+          </sc-for>
+          <button onClick="{{ openModal }}" class="nk-shine nk-cta" style="display:inline-flex;align-items:center;justify-content:center;font-family:Inter;font-weight:500;font-size:clamp(15px,1vw,20px);color:#fff;padding:15px clamp(30px,2.4vw,50px);border-radius:22px;background:linear-gradient(126deg,#1F50FF 27%,#5CA7FF 125%);box-shadow:0 8px 24px rgba(31,80,255,.34);border:none;cursor:pointer">Заказать</button>
+        </nav>
+        <button class="nk-burger" onClick="{{ toggleMenu }}" style="flex-direction:column;gap:5px;width:54px;height:54px;align-items:center;justify-content:center;border-radius:20px;border:1px solid rgba(255,255,255,.1);background:rgba(14,14,17,.82);backdrop-filter:blur(16px);cursor:pointer">
+          <span style="display:block;width:22px;height:2px;background:#fff;border-radius:2px"></span>
+          <span style="display:block;width:22px;height:2px;background:#fff;border-radius:2px"></span>
+          <span style="display:block;width:22px;height:2px;background:#fff;border-radius:2px"></span>
+        </button>
+        <div style="{{ mobileMenuStyle }}">
+          <sc-for list="{{ navLinks }}" as="lnk" hint-placeholder-count="5">
+            <a href="{{ lnk.h }}" onClick="{{ closeMenu }}" style="font-family:Inter;font-weight:500;font-size:18px;color:rgba(255,255,255,.85);text-decoration:none;padding:13px 6px;border-bottom:1px solid rgba(255,255,255,.06)">{{ lnk.t }}</a>
+          </sc-for>
+          <button onClick="{{ openModal }}" class="nk-cta" style="margin-top:10px;text-align:center;width:100%;font-family:Inter;font-weight:600;font-size:17px;color:#fff;padding:15px;border-radius:16px;background:linear-gradient(135deg,#1F50FF,#5CA7FF);border:none;cursor:pointer">Заказать</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ARTICLE META -->
+    <section style="max-width:1640px;margin:0 auto;padding:clamp(52px,6vw,80px) clamp(20px,4vw,40px) clamp(32px,4vw,48px)">
+      <div style="display:flex;align-items:center;gap:8px;font-family:Manrope;font-size:15px;color:rgba(255,255,255,.35);margin-bottom:28px">
+        <a href="index.html" style="color:rgba(255,255,255,.35);text-decoration:none;transition:color .3s" style-hover="color:rgba(255,255,255,.7)">Главная</a>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg>
+        <a href="blog.html" style="color:rgba(255,255,255,.35);text-decoration:none;transition:color .3s" style-hover="color:rgba(255,255,255,.7)">Блог</a>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg>
+        <span style="color:rgba(255,255,255,.6)">{{ article.category }}</span>
+      </div>
+      <span style="display:inline-flex;align-items:center;padding:8px 18px;border-radius:999px;background:rgba(31,80,255,.15);border:1px solid rgba(31,80,255,.4);font-family:Inter;font-weight:600;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:#9cc0ff;animation:nkRise .9s cubic-bezier(.16,.84,.34,1) .2s both">{{ article.category }}</span>
+      <h1 style="font-family:Unbounded;font-weight:600;font-size:clamp(36px,5vw,76px);line-height:1.06;letter-spacing:-.02em;color:#fff;margin-top:22px;max-width:1100px;animation:nkHero 1.2s cubic-bezier(.16,.84,.34,1) .35s both">{{ article.title }}</h1>
+      <div style="display:flex;align-items:center;gap:24px;margin-top:28px;flex-wrap:wrap;animation:nkRise 1s cubic-bezier(.16,.84,.34,1) .55s both">
+        <div style="display:flex;align-items:center;gap:10px">
+          <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#1F50FF,#5CA7FF);display:flex;align-items:center;justify-content:center;font-family:Inter;font-weight:700;font-size:15px;color:#fff;flex:0 0 auto">М</div>
+          <span style="font-family:Inter;font-weight:500;font-size:16px;color:rgba(255,255,255,.75)">Максим Некрасов</span>
+        </div>
+        <span style="font-family:Manrope;font-size:15px;color:rgba(255,255,255,.35)">{{ article.date }}</span>
+        <span style="font-family:Manrope;font-size:15px;color:rgba(255,255,255,.35)">{{ article.readTime }}</span>
+      </div>
+    </section>
+
+    <!-- COVER -->
+    <section style="max-width:1640px;margin:0 auto;padding:0 clamp(20px,4vw,40px) clamp(40px,5vw,64px)">
+      <div style="border-radius:clamp(20px,2.4vw,32px);overflow:hidden;aspect-ratio:16/8;box-shadow:0 24px 60px rgba(0,0,0,.4)">
+        <image-slot id="{{ article.coverId }}" style="width:100%;height:100%" shape="rounded" radius="30" placeholder="Обложка статьи (16:8)"></image-slot>
+      </div>
+    </section>
+
+    <!-- BODY 2-COL -->
+    <section class="art-body-grid" style="max-width:1640px;margin:0 auto;padding:0 clamp(20px,4vw,40px) clamp(80px,9vw,120px)">
+      <!-- article content -->
+      <div>
+        <p style="font-family:Manrope;font-size:clamp(17px,1.4vw,21px);line-height:1.72;color:rgba(255,255,255,.78)">{{ article.intro }}</p>
+        <p style="font-family:Manrope;font-size:clamp(17px,1.4vw,21px);line-height:1.72;color:rgba(255,255,255,.78);margin-top:24px">{{ article.intro2 }}</p>
+        <div style="border-left:3px solid #5CA7FF;padding:clamp(18px,2vw,28px) clamp(22px,2.5vw,36px);margin:clamp(28px,3.5vw,48px) 0;background:rgba(92,167,255,.06);border-radius:0 16px 16px 0">
+          <p style="font-family:Manrope;font-style:italic;font-size:clamp(18px,1.5vw,22px);line-height:1.5;color:rgba(255,255,255,.9)">{{ article.quote }}</p>
+          <p style="font-family:Inter;font-size:14px;color:rgba(255,255,255,.38);margin-top:12px">— {{ article.quoteSource }}</p>
+        </div>
+        <h2 style="font-family:Inter;font-weight:600;font-size:clamp(24px,2.4vw,36px);letter-spacing:-.01em;color:#fff;margin-top:clamp(32px,4vw,52px)">{{ article.section1Title }}</h2>
+        <p style="font-family:Manrope;font-size:clamp(17px,1.4vw,21px);line-height:1.72;color:rgba(255,255,255,.78);margin-top:16px">{{ article.section1Body }}</p>
+        <div style="display:flex;flex-direction:column;gap:12px;margin-top:20px">
+          <sc-for list="{{ article.bullets }}" as="b" hint-placeholder-count="4">
+            <div style="display:flex;align-items:flex-start;gap:12px;font-family:Manrope;font-size:clamp(16px,1.3vw,19px);color:rgba(255,255,255,.72)">
+              <span style="width:7px;height:7px;background:#5CA7FF;border-radius:50%;flex:0 0 auto;margin-top:8px"></span>
+              {{ b.t }}
+            </div>
+          </sc-for>
+        </div>
+        <!-- inline CTA -->
+        <div class="g" style="border-radius:clamp(20px,2.4vw,30px);padding:clamp(36px,4vw,52px);text-align:center;margin-top:clamp(48px,5.5vw,72px)">
+          <h3 style="font-family:Inter;font-weight:600;font-size:clamp(22px,2.2vw,32px);color:#fff">{{ article.ctaTitle }}</h3>
+          <p style="font-family:Manrope;font-size:clamp(15px,1.2vw,19px);color:rgba(255,255,255,.58);margin:12px auto 28px;max-width:440px;line-height:1.55">{{ article.ctaText }}</p>
+          <a href="#" onClick="{{ openModal }}" class="nk-shine nk-cta" style="display:inline-flex;align-items:center;justify-content:center;font-family:Inter;font-weight:600;font-size:clamp(15px,1.2vw,19px);color:#fff;text-decoration:none;padding:clamp(18px,1.8vw,24px) clamp(44px,4vw,64px);border-radius:999px;background:linear-gradient(135deg,#1F50FF,#5CA7FF);box-shadow:0 14px 40px rgba(31,80,255,.4)">{{ article.ctaBtn }}</a>
+        </div>
+      </div>
+      <!-- SIDEBAR -->
+      <div class="sidebar" style="display:flex;flex-direction:column;gap:18px;position:sticky;top:90px">
+        <div class="g" style="border-radius:22px;padding:clamp(20px,2vw,28px)">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+            <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#1F50FF,#5CA7FF);display:flex;align-items:center;justify-content:center;font-family:Inter;font-weight:700;font-size:16px;color:#fff;flex:0 0 auto">М</div>
+            <div><div style="font-family:Inter;font-weight:600;font-size:16px;color:#fff">Максим Некрасов</div><div style="font-family:Manrope;font-size:13px;color:rgba(255,255,255,.4)">Основатель · Дизайнер</div></div>
+          </div>
+          <p style="font-family:Manrope;font-size:14px;line-height:1.55;color:rgba(255,255,255,.52)">5+ лет в веб-разработке. Создал 40+ сайтов для малого и среднего бизнеса.</p>
+        </div>
+        <div class="g" style="border-radius:22px;padding:clamp(20px,2vw,28px)">
+          <div style="font-family:Inter;font-weight:600;font-size:15px;color:#fff;margin-bottom:14px">Содержание</div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <sc-for list="{{ article.toc }}" as="t" hint-placeholder-count="3">
+              <a href="{{ t.href }}" style="font-family:Manrope;font-size:14px;color:rgba(255,255,255,.52);text-decoration:none;transition:color .3s;display:flex;align-items:center;gap:6px" style-hover="color:#5CA7FF"><span style="width:5px;height:5px;border-radius:50%;background:currentColor;flex:0 0 auto;opacity:.6"></span>{{ t.label }}</a>
+            </sc-for>
+          </div>
+        </div>
+        <div class="g" style="border-radius:22px;padding:clamp(20px,2vw,28px)">
+          <div style="font-family:Inter;font-weight:600;font-size:15px;color:#fff;margin-bottom:12px">Теги</div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <sc-for list="{{ article.tags }}" as="tag" hint-placeholder-count="4">
+              <span style="display:inline-flex;padding:6px 13px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);font-family:Inter;font-weight:500;font-size:13px;color:rgba(255,255,255,.68)">{{ tag.t }}</span>
+            </sc-for>
+          </div>
+        </div>
+        <div style="border-radius:22px;padding:clamp(20px,2vw,28px);background:linear-gradient(155deg,rgba(31,80,255,.28),rgba(92,167,255,.12));border:1px solid rgba(92,167,255,.4)">
+          <div style="font-family:Inter;font-weight:600;font-size:17px;color:#fff;margin-bottom:10px">Нужен сайт?</div>
+          <p style="font-family:Manrope;font-size:14px;color:rgba(255,255,255,.62);margin-bottom:18px;line-height:1.55">Разработаем сайт, который решает ваши задачи.</p>
+          <a href="#" onClick="{{ openModal }}" style="display:flex;align-items:center;justify-content:center;font-family:Inter;font-weight:600;font-size:15px;color:#fff;text-decoration:none;padding:14px;border-radius:14px;background:linear-gradient(135deg,#1F50FF,#5CA7FF)">Обсудить проект</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- RELATED -->
+    <section style="max-width:1640px;margin:0 auto;padding:0 clamp(20px,4vw,40px) clamp(80px,9vw,120px)" data-reveal="">
+      <div style="height:1px;background:rgba(255,255,255,.07);margin-bottom:clamp(40px,5vw,64px)"></div>
+      <h2 style="font-family:Inter;font-weight:600;font-size:clamp(26px,3vw,46px);letter-spacing:-.01em;color:#fff;margin-bottom:clamp(28px,3vw,44px)">Похожие статьи</h2>
+      <div class="rel-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+        <sc-for list="{{ relatedArticles }}" as="r" hint-placeholder-count="3">
+          <a href="{{ r.href }}" class="rel-card g" style="display:flex;flex-direction:column;text-decoration:none;border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,.12)">
+            <div style="aspect-ratio:16/9;overflow:hidden"><image-slot id="{{ r.slotId }}" style="width:100%;height:100%" shape="rect" placeholder="{{ r.placeholder }}"></image-slot></div>
+            <div style="padding:clamp(18px,1.8vw,24px);display:flex;flex-direction:column;gap:10px">
+              <span style="display:inline-flex;align-self:flex-start;padding:5px 12px;border-radius:999px;background:rgba(31,80,255,.15);border:1px solid rgba(31,80,255,.4);font-family:Inter;font-weight:600;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:#9cc0ff">{{ r.category }}</span>
+              <h3 style="font-family:Inter;font-weight:600;font-size:clamp(15px,1.2vw,18px);color:#fff;line-height:1.3">{{ r.title }}</h3>
+              <div style="display:flex;gap:14px;margin-top:auto"><span style="font-family:Manrope;font-size:13px;color:rgba(255,255,255,.35)">{{ r.date }}</span><span style="font-family:Manrope;font-size:13px;color:rgba(255,255,255,.35)">{{ r.readTime }}</span></div>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+    </section>
+
+    <button class="nk-sticky-cta nk-shine" onClick="{{ openModal }}" style="display:none;position:fixed;left:16px;right:16px;bottom:16px;z-index:9985;align-items:center;justify-content:center;gap:8px;font-family:Inter;font-weight:600;font-size:17px;color:#fff;padding:17px;border-radius:18px;border:none;background:linear-gradient(135deg,var(--nk-a1,#1F50FF),var(--nk-a2,#5CA7FF));box-shadow:0 12px 34px rgba(31,80,255,.5);cursor:pointer">Обсудить проект</button>
+    <footer style="padding:clamp(24px,2.5vw,36px) clamp(20px,4vw,40px);border-top:1px solid rgba(255,255,255,.06);max-width:1640px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+      <span style="font-family:Manrope;font-size:14px;color:rgba(255,255,255,.28)">© 2026 Студия Некрасов</span>
+      <div style="display:flex;gap:24px">
+        <a href="blog.html" style="font-family:Manrope;font-size:14px;color:rgba(255,255,255,.38);text-decoration:none;transition:color .3s" style-hover="color:rgba(255,255,255,.7)">Блог</a>
+        <a href="#" onClick="{{ openModal }}" style="font-family:Manrope;font-size:14px;color:rgba(255,255,255,.38);text-decoration:none;transition:color .3s" style-hover="color:rgba(255,255,255,.7)">Контакты</a>
+      </div>
+    </footer>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  rootRef = React.createRef();
+  state = { menuOpen: false, modalOpen: false, mName: '', mPhone: '', mTask: '', mSphere: '', mSent: false, mAgree: false, mAgreeErr: false };
+
+  componentDidMount() {
+    this.updateSeoTags();
+    this._io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if(!e.isIntersecting) return; e.target.style.opacity='1'; e.target.style.transform='none'; this._io.unobserve(e.target); });
+    }, { threshold: 0.07, rootMargin:'0px 0px -50px 0px' });
+    requestAnimationFrame(() => {
+      const root=this.rootRef.current; if(!root) return;
+      const revs=root.querySelectorAll('[data-reveal]');
+      revs.forEach((el)=>{ const p=el.parentElement; const idx=[...p.children].indexOf(el); const d=Math.min(idx*.09,.45); el.style.cssText+=';opacity:0;transform:translateY(38px);transition:opacity 1.2s cubic-bezier(.16,.84,.34,1) '+d+'s,transform 1.2s cubic-bezier(.16,.84,.34,1) '+d+'s'; this._io.observe(el); });
+      this._fb=setTimeout(()=>revs.forEach(el=>{el.style.opacity='1';el.style.transform='none';}),1600);
+    });
+    if(typeof window!=='undefined'&&window.matchMedia&&window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+      const ring=document.createElement('div'); ring.className='nk-cursor-ring';
+      const dot=document.createElement('div'); dot.className='nk-cursor-dot';
+      document.body.appendChild(ring); document.body.appendChild(dot);
+      document.documentElement.classList.add('nk-has-cursor'); this._curEls=[ring,dot];
+      let mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my,shown=false,last=null; const c=' translate(-50%,-50%)';
+      const mv=(e)=>{ mx=e.clientX;my=e.clientY;dot.style.transform='translate('+mx+'px,'+my+'px)'+c;if(!shown){shown=true;ring.style.opacity='1';dot.style.opacity='1';}const t=e.target&&e.target.closest?e.target.closest('a,button,input,image-slot'):null;if(t!==last){last=t;ring.classList.toggle('nk-cursor-hover',!!t);} };
+      const lv=()=>{shown=false;ring.style.opacity='0';dot.style.opacity='0';};
+      const loop=()=>{rx+=(mx-rx)*.18;ry+=(my-ry)*.18;ring.style.transform='translate('+rx+'px,'+ry+'px)'+c;this._raf=requestAnimationFrame(loop);};
+      window.addEventListener('mousemove',mv,{passive:true}); document.addEventListener('mouseleave',lv);
+      this._mv=mv; this._lv=lv; loop();
+    }
+    this._rsz=()=>this.forceUpdate(); window.addEventListener('resize',this._rsz);
+  }
+
+  updateSeoTags() {
+    try {
+      const titles = {
+        1: 'Почему скорость загрузки влияет на продажи',
+        2: '5 ошибок дизайна, из-за которых уходят клиенты',
+        3: 'Как мы увеличили трафик автосервиса в 3 раза',
+      };
+      const descs = {
+        1: 'Когда вы в последний раз уходили с сайта, потому что он долго грузился? По данным Google, 53% мобильных пользователей покидают страницу, если она грузится дольше 3 секунд.',
+        2: 'Хороший дизайн — это не про красоту, а про то, как пользователь движется по странице и принимает решение. Разбираем 5 частых ошибок, из-за которых сайты теряют клиентов.',
+        3: 'Автосервис «АвтоПлюс» обратился к нам с сайтом, который не приносил заявок. Рассказываем, что именно сделали и какой результат получили за 4 месяца.',
+      };
+      let id = parseInt(new URLSearchParams(window.location.search).get('id'), 10) || 1;
+      if (!titles[id]) id = 1;
+      const pageTitle = titles[id] + ' | Блог Студии Некрасов';
+      const pageDesc = descs[id];
+      const canonicalUrl = 'https://nekrasovstudio.com/article.html?id=' + id;
+      document.title = pageTitle;
+      const setMeta = (sel, attr, val) => { const el = document.querySelector(sel); if (el) el.setAttribute(attr, val); };
+      setMeta('meta[name="description"]', 'content', pageDesc);
+      setMeta('meta[property="og:title"]', 'content', titles[id] + ' | Студия Некрасов');
+      setMeta('meta[property="og:description"]', 'content', pageDesc);
+      setMeta('link[rel="canonical"]', 'href', canonicalUrl);
+    } catch (e) {}
+  }
+
+  componentWillUnmount() {
+    if(this._io) this._io.disconnect(); if(this._fb) clearTimeout(this._fb);
+    if(this._raf) cancelAnimationFrame(this._raf);
+    if(this._mv) window.removeEventListener('mousemove',this._mv);
+    if(this._lv) document.removeEventListener('mouseleave',this._lv);
+    if(this._curEls) this._curEls.forEach(el=>el.remove());
+    document.documentElement.classList.remove('nk-has-cursor');
+    window.removeEventListener('resize',this._rsz);
+  }
+
+  toggleMenu = () => this.setState((s)=>({menuOpen:!s.menuOpen}));
+  closeMenu = () => this.setState({menuOpen:false});
+
+  renderVals() {
+    const navLinks = [
+      {t:'Главная',h:'index.html'},{t:'Услуги',h:'services.html'},
+      {t:'Портфолио',h:'portfolio.html'},{t:'О нас',h:'about.html'},{t:'Прайс',h:'pricing.html'},
+      {t:'Блог',h:'blog.html'},
+    ];
+    const allArticles = [
+      {id:1,cat:'Разработка',title:'Почему скорость загрузки влияет на продажи',date:'15 июн 2026',readTime:'5 мин',slotId:'rel_b1',placeholder:'Скорость сайта',href:'article.html?id=1',
+        intro:'Когда вы в последний раз уходили с сайта, потому что он долго грузился? Скорее всего — недавно. И ваши клиенты делают то же самое. По данным Google, 53% мобильных пользователей покидают страницу, если она загружается дольше 3 секунд.',
+        intro2:'Каждая секунда задержки снижает конверсию в среднем на 7%. Это не теория — это цифры, которые бизнес теряет ежедневно, пока сайт «думает».',
+        quote:'Снижение времени загрузки на 0.1 секунды увеличивает конверсию интернет-магазина на 8.4%',
+        quoteSource:'Исследование Deloitte',
+        section1Title:'Что замедляет ваш сайт',
+        section1Body:'Причин может быть несколько, и часто они накапливаются постепенно. Вот самые распространённые:',
+        bullets:[{t:'Не оптимизированные изображения (PNG вместо WebP, без lazy load)'},{t:'Отсутствие кеширования и CDN'},{t:'Избыточные скрипты и плагины'},{t:'Медленный хостинг без SSD'}],
+        ctaTitle:'Хотите быстрый сайт?',ctaText:'Проведём бесплатный аудит скорости и покажем, где ваш сайт теряет клиентов.',ctaBtn:'Получить аудит бесплатно',
+        toc:[{label:'Почему скорость важна',href:'#'},{label:'Что замедляет сайт',href:'#'},{label:'Как ускорить',href:'#'}],
+        tags:[{t:'скорость'},{t:'конверсия'},{t:'оптимизация'},{t:'UX'}]},
+      {id:2,cat:'Дизайн',title:'5 ошибок дизайна, из-за которых уходят клиенты',date:'10 июн 2026',readTime:'7 мин',slotId:'rel_b2',placeholder:'Ошибки дизайна',href:'article.html?id=2',
+        intro:'Хороший дизайн — это не про красоту. Это про то, как пользователь движется по странице и принимает решение. Небольшие ошибки в UI могут стоить вам значительной части конверсий.',
+        intro2:'Мы разобрали 40+ сайтов наших клиентов и выявили самые частые проблемы — вот они.',
+        quote:'Пользователи принимают решение о доверии к сайту за первые 50 миллисекунд',
+        quoteSource:'Stanford Web Credibility Research',
+        section1Title:'Ошибка №1: нет чёткого призыва к действию',
+        section1Body:'Если пользователь не понимает, что ему нужно сделать дальше — он уходит. CTA должен быть один, хорошо заметный и говорить именно о том действии, которое ему нужно совершить.',
+        bullets:[{t:'Слишком много кнопок одинакового веса'},{t:'Размытые формулировки («Узнать подробнее» вместо «Получить расчёт»)'},{t:'CTA теряется среди других элементов'},{t:'Нет повторения CTA в середине и конце страницы'}],
+        ctaTitle:'Хотите проверить ваш сайт?',ctaText:'Сделаем бесплатный аудит UX и покажем, что мешает клиентам делать целевые действия.',ctaBtn:'Получить аудит UX',
+        toc:[{label:'Ошибки CTA',href:'#'},{label:'Типографика',href:'#'},{label:'Мобильная версия',href:'#'}],
+        tags:[{t:'UX'},{t:'дизайн'},{t:'CTA'},{t:'конверсия'}]},
+      {id:3,cat:'Кейс',title:'Как мы увеличили трафик автосервиса в 3 раза',date:'3 июн 2026',readTime:'6 мин',slotId:'rel_b3',placeholder:'Кейс автосервис',href:'article.html?id=3',
+        intro:'Автосервис «АвтоПлюс» обратился к нам с сайтом, который не приносил заявок. 200 посетителей в месяц, ноль звонков с сайта. За 4 месяца мы изменили ситуацию радикально.',
+        intro2:'Расскажем, что именно сделали, в каком порядке и какой результат получили.',
+        quote:'Правильная SEO-стратегия важнее, чем красивый сайт. Если вас не найдут — дизайн не поможет.',
+        quoteSource:'Максим Некрасов, Студия Некрасов',
+        section1Title:'Шаг 1: технический аудит',
+        section1Body:'Начали с технического аудита — нашли 47 ошибок, замедляющих сайт и мешающих индексации.',
+        bullets:[{t:'Скорость загрузки: 8.2с → 1.4с'},{t:'Закрытые от индексации страницы открыли'},{t:'Дубли страниц устранили'},{t:'Микроразметку добавили'}],
+        ctaTitle:'Хотите такой же результат?',ctaText:'Расскажем, что можно сделать с вашим сайтом на бесплатной консультации.',ctaBtn:'Обсудить проект',
+        toc:[{label:'Исходная ситуация',href:'#'},{label:'Технический аудит',href:'#'},{label:'Результаты',href:'#'}],
+        tags:[{t:'SEO'},{t:'кейс'},{t:'трафик'},{t:'автосервис'}]},
+    ];
+    let id = 1;
+    try { id = parseInt(new URLSearchParams(window.location.search).get('id'),10)||1; } catch(e){}
+    const article = allArticles.find(a=>a.id===id) || allArticles[0];
+    article.coverId = 'art_cover_'+article.id;
+    const relatedArticles = allArticles.filter(a=>a.id!==article.id).slice(0,3).map(a=>({...a,slotId:'rel_'+a.id,placeholder:a.placeholder}));
+    const mobileMenuStyle = this.state.menuOpen
+      ? 'position:absolute;top:100%;left:0;right:0;margin-top:12px;padding:16px;border-radius:24px;background:rgba(14,14,17,.95);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(20px);display:flex;flex-direction:column;gap:6px;z-index:999'
+      : 'display:none';
+    const s = this.state;
+    const mv = { modalOpen:s.modalOpen, mName:s.mName, mPhone:s.mPhone, mTask:s.mTask, mBtnLabel:s.mSent?'✓ Отправлено!':'Отправить заявку', onMName:(e)=>this.setState({mName:e.target.value}), onMPhone:(e)=>this.setState({mPhone:e.target.value}), onMTask:(e)=>this.setState({mTask:e.target.value}), openModal:(e)=>{if(e&&e.preventDefault)e.preventDefault();this.setState({modalOpen:true,mSent:false});document.body.style.overflow='hidden';}, closeModal:()=>{this.setState({modalOpen:false});document.body.style.overflow='';}, onOverlayClick:(e)=>{if(e.target===e.currentTarget){this.setState({modalOpen:false});document.body.style.overflow='';}}, stopProp:(e)=>e.stopPropagation(), submitModal:()=>{const st=this.state;if(!st.mName.trim()||!st.mPhone.trim())return;this.setState({mSent:true});setTimeout(()=>{this.setState({modalOpen:false});document.body.style.overflow='';window.location.href='thank-you.html';},700);} };
+    return { rootRef:this.rootRef, navLinks, article, relatedArticles, mobileMenuStyle, toggleMenu:this.toggleMenu, closeMenu:this.closeMenu, ...mv, onModalSubmit:(e)=>{if(e&&e.preventDefault)e.preventDefault();const st=this.state;if(!st.mName.trim()||!st.mPhone.trim())return;if(!st.mAgree){this.setState({mAgreeErr:true});return;}window.location.href='thank-you.html';}, mAgree:s.mAgree, mAgreeErr:s.mAgreeErr, mAgreeBorder:s.mAgreeErr?'#ff5470':'rgba(92,167,255,.15)', onMAgree:(e)=>this.setState({mAgree:e.target.checked,mAgreeErr:false}) };
+  }
+}
+</script>
+</body>
+</html>
