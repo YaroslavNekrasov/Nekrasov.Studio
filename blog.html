@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Блог о веб-разработке и дизайне | Студия Некрасов</title>
-<meta name="description" content="Статьи о веб-разработке, SEO, дизайне и маркетинге. Советы, кейсы, тренды для вашего бизнеса.">
-<meta property="og:title" content="Блог | Студия Некрасов">
-<meta property="og:description" content="Статьи о веб-разработке, SEO, дизайне и маркетинге.">
+<title>Блог о сайтах, SEO и дизайне | Студия Некрасов</title>
+<meta name="description" content="Практические статьи о разработке сайтов, SEO, дизайне и продвижении бизнеса в интернете от студии Некрасов.">
+<meta property="og:title" content="Блог о сайтах, SEO и дизайне | Студия Некрасов">
+<meta property="og:description" content="Практические статьи о разработке сайтов, SEO, дизайне и продвижении бизнеса.">
 <link rel="canonical" href="https://nekrasovstudio.com/blog.html">
 <style>html,body{background:#05060e}</style>
 <script>document.addEventListener("mouseover",function(e){var a=e.target.closest&&e.target.closest('a[href$=".html"]');if(a&&!a.__pf){a.__pf=1;var l=document.createElement("link");l.rel="prefetch";l.href=a.getAttribute("href");document.head.appendChild(l);}},{passive:true});</script>
@@ -116,11 +116,11 @@ body{background:#05060e;-webkit-font-smoothing:antialiased}
     </header>
 
     <!-- HERO + FILTERS -->
-    <section style="max-width:1640px;margin:0 auto;padding:clamp(60px,8vw,110px) clamp(20px,4vw,40px) clamp(40px,5vw,60px)">
+    <section style="max-width:1640px;margin:0 auto;padding:clamp(60px,8vw,110px) clamp(20px,4vw,40px) clamp(40px,5vw,60px);text-align:center">
       <span style="display:inline-flex;align-items:center;padding:8px 18px;border-radius:999px;background:rgba(31,80,255,.15);border:1px solid rgba(31,80,255,.4);font-family:Inter;font-weight:600;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:#9cc0ff;animation:nkRise .9s cubic-bezier(.16,.84,.34,1) .2s both">Полезное</span>
       <h1 style="font-family:Unbounded;font-weight:600;font-size:clamp(44px,7.5vw,108px);line-height:1.03;letter-spacing:-.02em;color:#fff;margin-top:24px;animation:nkHero 1.3s cubic-bezier(.16,.84,.34,1) .35s both">Блог и <span style="background:linear-gradient(120deg,#1F50FF,#5CA7FF);-webkit-background-clip:text;background-clip:text;color:transparent">кейсы</span></h1>
-      <p style="font-family:Manrope;font-size:clamp(17px,1.5vw,22px);line-height:1.5;color:rgba(255,255,255,.62);max-width:620px;margin-top:20px;animation:nkRise 1.1s cubic-bezier(.16,.84,.34,1) .55s both">Статьи о разработке, дизайне, SEO и реальные кейсы наших клиентов.</p>
-      <div style="display:flex;gap:10px;margin-top:32px;flex-wrap:wrap;animation:nkRise 1s cubic-bezier(.16,.84,.34,1) .7s both">
+      <p style="font-family:Manrope;font-size:clamp(17px,1.5vw,22px);line-height:1.5;color:rgba(255,255,255,.62);max-width:620px;margin:20px auto 0;animation:nkRise 1.1s cubic-bezier(.16,.84,.34,1) .55s both">Статьи о разработке, дизайне, SEO и реальные кейсы наших клиентов.</p>
+      <div style="display:flex;justify-content:center;gap:10px;margin-top:32px;flex-wrap:wrap;animation:nkRise 1s cubic-bezier(.16,.84,.34,1) .7s both">
         <sc-for list="{{ filters }}" as="f" hint-placeholder-count="5">
           <button onClick="{{ f.onClick }}" style="{{ f.btnStyle }}">{{ f.label }}</button>
         </sc-for>
@@ -244,3 +244,4 @@ class Component extends DCLogic {
 </script>
 </body>
 </html>
+
