@@ -133,7 +133,7 @@ body{background:#05060e;-webkit-font-smoothing:antialiased}
         <sc-for list="{{ filteredArticles }}" as="art" hint-placeholder-count="6">
           <a href="{{ art.href }}" class="art-card g" style="display:flex;flex-direction:column;text-decoration:none;border-radius:28px;overflow:hidden;border:1px solid rgba(255,255,255,.12)" data-reveal="">
             <div class="art-img" style="aspect-ratio:16/9;overflow:hidden">
-              <image-slot id="{{ art.slotId }}" style="width:100%;height:100%;transition:transform .7s cubic-bezier(.22,.61,.36,1)" shape="rect" placeholder="{{ art.placeholder }}"></image-slot>
+              <image-slot id="{{ art.slotId }}" src="{{ art.image }}" style="width:100%;height:100%;transition:transform .7s cubic-bezier(.22,.61,.36,1)" shape="rect" placeholder="{{ art.placeholder }}"></image-slot>
             </div>
             <div style="padding:clamp(20px,2vw,28px);display:flex;flex-direction:column;gap:12px;flex:1">
               <span style="display:inline-flex;align-items:center;align-self:flex-start;padding:6px 14px;border-radius:999px;background:rgba(31,80,255,.15);border:1px solid rgba(31,80,255,.4);font-family:Inter;font-weight:600;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:#9cc0ff">{{ art.category }}</span>
@@ -210,12 +210,12 @@ class Component extends DCLogic {
       {t:'Блог',h:'blog.html'},
     ];
     const articles = [
-      {id:1,cat:'dev',category:'Разработка',title:'Почему скорость загрузки влияет на продажи: разбираем по цифрам',excerpt:'53% пользователей уходят, если сайт грузится дольше 3 секунд. Разбираем, как ускорить сайт и увеличить конверсию.',date:'15 июн 2026',readTime:'5 мин',slotId:'blog_a1',placeholder:'Обложка: скорость сайта'},
-      {id:2,cat:'design',category:'Дизайн',title:'5 ошибок дизайна, из-за которых клиенты уходят с сайта',excerpt:'Распространённые ошибки в UX и UI, которые незаметно снижают конверсию.',date:'10 июн 2026',readTime:'7 мин',slotId:'blog_a2',placeholder:'Обложка: ошибки дизайна'},
-      {id:3,cat:'case',category:'Кейс',title:'Как мы увеличили трафик автосервиса в 3 раза за 4 месяца',excerpt:'Реальный кейс: от 200 посетителей в месяц до 600+ благодаря SEO-оптимизации.',date:'3 июн 2026',readTime:'6 мин',slotId:'blog_a3',placeholder:'Обложка: кейс автосервис'},
-      {id:4,cat:'seo',category:'SEO',title:'SEO в 2026: что реально работает, а что давно устарело',excerpt:'Актуальные методы продвижения против устаревших техник, которые только вредят.',date:'28 мая 2026',readTime:'8 мин',slotId:'blog_a4',placeholder:'Обложка: SEO 2026'},
-      {id:5,cat:'dev',category:'Разработка',title:'Tilda, WordPress или заказная разработка: как выбрать платформу',excerpt:'Честный разбор плюсов и минусов каждой платформы для разных задач.',date:'20 мая 2026',readTime:'4 мин',slotId:'blog_a5',placeholder:'Обложка: выбор платформы'},
-      {id:6,cat:'design',category:'Дизайн',title:'UI-тренды 2026: минимализм, стекло и кастомные курсоры',excerpt:'Что сейчас в топе в веб-дизайне и как использовать тренды без переборщить.',date:'12 мая 2026',readTime:'5 мин',slotId:'blog_a6',placeholder:'Обложка: дизайн-тренды'},
+      {id:1,cat:'dev',category:'Разработка',title:'Почему скорость загрузки влияет на продажи: разбираем по цифрам',excerpt:'53% пользователей уходят, если сайт грузится дольше 3 секунд. Разбираем, как ускорить сайт и увеличить конверсию.',date:'15 июня 2025',readTime:'7 мин',slotId:'blog_a1',image:'uploads/blog-speed.svg',placeholder:'Обложка: скорость сайта'},
+      {id:2,cat:'design',category:'Дизайн',title:'5 ошибок дизайна, из-за которых клиенты уходят с сайта',excerpt:'Распространённые ошибки в UX и UI, которые незаметно снижают конверсию.',date:'10 июня 2025',readTime:'8 мин',slotId:'blog_a2',image:'uploads/blog-design.svg',placeholder:'Обложка: ошибки дизайна'},
+      {id:3,cat:'case',category:'Кейс',title:'Как мы увеличили трафик автосервиса в 3 раза за 4 месяца',excerpt:'Реальный кейс: от 200 посетителей в месяц до 600+ благодаря SEO-оптимизации.',date:'3 июня 2025',readTime:'9 мин',slotId:'blog_a3',image:'uploads/blog-seo-case.svg',placeholder:'Обложка: кейс автосервис'},
+      {id:4,cat:'seo',category:'SEO',title:'SEO: что реально работает, а что давно устарело',excerpt:'Разбираем базовые методы продвижения, которые помогают сайту расти без пустых обещаний.',date:'28 мая 2025',readTime:'10 мин',slotId:'blog_a4',image:'uploads/blog-seo.svg',placeholder:'Обложка: SEO'},
+      {id:5,cat:'dev',category:'Разработка',title:'Tilda, WordPress или заказная разработка: как выбрать платформу',excerpt:'Честно сравниваем подходы и объясняем, какая платформа подходит бизнесу.',date:'20 мая 2025',readTime:'8 мин',slotId:'blog_a5',image:'uploads/blog-platform.svg',placeholder:'Обложка: выбор платформы'},
+      {id:6,cat:'design',category:'Дизайн',title:'UI-тренды: минимализм, стекло и выразительные интерфейсы',excerpt:'Как использовать современные визуальные приёмы так, чтобы сайт оставался понятным.',date:'12 мая 2025',readTime:'7 мин',slotId:'blog_a6',image:'uploads/blog-ui-trends.svg',placeholder:'Обложка: дизайн-тренды'},
     ].map((a)=>({...a,href:'article.html?id='+a.id}));
 
     const af = this.state.activeFilter;
