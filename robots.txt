@@ -2,6 +2,8 @@ User-agent: *
 Allow: /
 Disallow: /Макеты.dc.html
 Disallow: /Nekrasov%20Studio.dc.html
+Disallow: /*.dc.html
 Disallow: /tmp/
 
 Sitemap: https://nekrasovstudio.com/sitemap.xml
+

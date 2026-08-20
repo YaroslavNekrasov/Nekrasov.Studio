@@ -8,6 +8,7 @@
 <meta property="og:title" content="Почему скорость загрузки влияет на продажи | Студия Некрасов">
 <meta property="og:description" content="Статья о том, как скорость сайта влияет на конверсию и продажи.">
 <link rel="canonical" href="https://nekrasovstudio.com/article.html?id=1">
+<script id="article-schema" type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Почему скорость загрузки влияет на продажи","description":"Когда вы в последний раз уходили с сайта, потому что он долго грузился? Разбираем влияние скорости сайта на продажи.","author":{"@type":"Person","name":"Ярослав Некрасов"},"publisher":{"@type":"Organization","name":"Студия Некрасов"},"mainEntityOfPage":"https://nekrasovstudio.com/article.html?id=1"}</script>
 <style>html,body{background:#05060e}</style>
 <script>document.addEventListener("mouseover",function(e){var a=e.target.closest&&e.target.closest('a[href$=".html"]');if(a&&!a.__pf){a.__pf=1;var l=document.createElement("link");l.rel="prefetch";l.href=a.getAttribute("href");document.head.appendChild(l);}},{passive:true});</script>
 <script src="./support.js"></script>
@@ -285,6 +286,12 @@ class Component extends DCLogic {
       setMeta('meta[property="og:title"]', 'content', titles[id] + ' | Студия Некрасов');
       setMeta('meta[property="og:description"]', 'content', pageDesc);
       setMeta('link[rel="canonical"]', 'href', canonicalUrl);
+      const schema = document.getElementById('article-schema');
+      if (schema) schema.textContent = JSON.stringify({
+        '@context':'https://schema.org','@type':'Article','headline':titles[id],
+        'description':pageDesc,'author':{'@type':'Person','name':'Ярослав Некрасов'},
+        'publisher':{'@type':'Organization','name':'Студия Некрасов'},'mainEntityOfPage':canonicalUrl
+      });
     } catch (e) {}
   }
 
@@ -358,3 +365,4 @@ class Component extends DCLogic {
 </script>
 </body>
 </html>
+
