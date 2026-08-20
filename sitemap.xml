@@ -66,13 +66,14 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://nekrasovstudio.com/privacy-policy</loc>
+    <loc>https://nekrasovstudio.com/privacy-policy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
   <url>
-    <loc>https://nekrasovstudio.com/terms</loc>
+    <loc>https://nekrasovstudio.com/terms.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
 </urlset>
+
