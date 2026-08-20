@@ -175,6 +175,9 @@ body{background:#05060e;-webkit-font-smoothing:antialiased}
         </div>
         <h2 style="font-family:Inter;font-weight:600;font-size:clamp(24px,2.4vw,36px);letter-spacing:-.01em;color:#fff;margin-top:clamp(32px,4vw,52px)">{{ article.section3Title }}</h2>
         <p style="font-family:Manrope;font-size:clamp(17px,1.4vw,21px);line-height:1.72;color:rgba(255,255,255,.78);margin-top:16px">{{ article.section3Body }}</p>
+        <h2 style="font-family:Inter;font-weight:600;font-size:clamp(24px,2.4vw,36px);letter-spacing:-.01em;color:#fff;margin-top:clamp(32px,4vw,52px)">{{ article.section4Title }}</h2>
+        <p style="font-family:Manrope;font-size:clamp(17px,1.4vw,21px);line-height:1.72;color:rgba(255,255,255,.78);margin-top:16px">{{ article.section4Body }}</p>
+        <p style="font-family:Manrope;font-size:clamp(17px,1.4vw,21px);line-height:1.72;color:rgba(255,255,255,.78);margin-top:20px">{{ article.section4Body2 }}</p>
         <!-- inline CTA -->
         <div class="g" style="border-radius:clamp(20px,2.4vw,30px);padding:clamp(36px,4vw,52px);text-align:center;margin-top:clamp(48px,5.5vw,72px)">
           <h3 style="font-family:Inter;font-weight:600;font-size:clamp(22px,2.2vw,32px);color:#fff">{{ article.ctaTitle }}</h3>
@@ -376,7 +379,16 @@ class Component extends DCLogic {
     let id = 1;
     try { id = parseInt(new URLSearchParams(window.location.search).get('id'),10)||1; } catch(e){}
     const article = allArticles.find(a=>a.id===id) || allArticles[0];
-    article.image = article.image ? article.image.replace(/\.svg$/, '.png') : article.image;
+    article.image = article.image ? article.image.replace(/\.png$/, '-min.svg').replace(/\.svg$/, '-min.svg') : article.image;
+    const practical = {
+      1:{title:'Практический чек-лист для владельца сайта',body:'Откройте сайт с телефона и засеките время до появления первого содержательного блока. Затем сожмите самое тяжёлое изображение и повторите проверку. Даже такой простой тест часто показывает, где скрыта первая точка роста.',body2:'Не пытайтесь исправить всё сразу. Выберите одну страницу, зафиксируйте текущий результат и меняйте по одному фактору. Так будет понятно, какое действие действительно улучшило скорость и поведение пользователей.'},
+      2:{title:'Как проверить дизайн самостоятельно',body:'Попросите человека, который не знаком с вашим бизнесом, открыть страницу и за десять секунд ответить: чем вы занимаетесь, для кого работаете и что нужно нажать дальше. Если ответы неочевидны, проблема обычно не в цветах, а в структуре.',body2:'После этого пройдите страницу с телефона одной рукой. Все ли кнопки доступны? Не приходится ли увеличивать текст? Такой тест быстро показывает реальные проблемы интерфейса, которые не видны на макете.'},
+      3:{title:'Что можно повторить в своём проекте',body:'Начинайте продвижение с одной услуги и одного понятного региона. Соберите вопросы клиентов, превратите их в отдельные блоки на странице и свяжите страницу с соседними услугами. Это полезнее, чем бездумно добавлять десятки ключевых слов.',body2:'Результаты SEO лучше оценивать месяц к месяцу: показы, переходы, обращения и качество заявок. Поисковый трафик ценен не сам по себе, а тогда, когда приводит людей с конкретной потребностью.'},
+      4:{title:'План работ на первые 30 дней',body:'Составьте список важных страниц, проверьте их заголовки, описания, адреса и ссылки. Затем посмотрите, отвечает ли каждая страница на отдельный вопрос клиента. Если две страницы говорят об одном и том же, их лучше объединить или чётче разделить.',body2:'После базовой проверки добавьте полезный материал: ответы на вопросы, примеры работ, цены и понятные условия. Такой контент помогает и поиску, и человеку, который сравнивает подрядчиков.'},
+      5:{title:'Простая схема выбора',body:'Запишите, что сайт должен делать в первый год: принимать заявки, продавать товары, показывать портфолио или автоматизировать процесс. Затем отдельно отметьте, кто будет обновлять контент и какие интеграции понадобятся.',body2:'Если требования пока неясны, выбирайте решение, которое позволяет быстро проверить спрос и не запирает вас в сложной системе. Платформа должна соответствовать этапу бизнеса, а не моде.'},
+      6:{title:'Минимальный набор для современного интерфейса',body:'Начните с понятной типографики, контраста, аккуратной сетки и одной заметной кнопки. Затем добавьте один визуальный акцент: мягкий градиент, иллюстрацию или деликатную анимацию. Этого уже достаточно, чтобы сайт выглядел современно.',body2:'Проверьте результат в обычном браузере и на слабом телефоне. Если эффект исчезает без анимации, а текст становится труднее читать, значит приём выбран ради внешнего вида, а не ради пользователя.'}
+    }[article.id] || {};
+    article.section4Title=practical.title; article.section4Body=practical.body; article.section4Body2=practical.body2;
     article.coverId = 'art_cover_'+article.id;
     const relatedArticles = allArticles.filter(a=>a.id!==article.id).slice(0,3).map(a=>({...a,slotId:'rel_'+a.id,placeholder:a.placeholder}));
     const mobileMenuStyle = this.state.menuOpen
