@@ -9,18 +9,145 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=20260827">
 </head>
 <body>
 
-<div class="notfound-page">
-  <main>
-    <h1>404</h1>
-    <h2>Страница не найдена</h2>
-    <p>Похоже, ссылка устарела или страница была перемещена.</p>
-    <a href="index.html" class="btn btn-primary">Вернуться на главную</a>
-  </main>
+<!-- МОДАЛЬНАЯ ФОРМА ЗАЯВКИ -->
+<div class="modal-overlay">
+  <div class="modal-box">
+    <div class="modal-head">
+      <div>
+        <h2>Обсудим ваш проект</h2>
+        <p>Оставьте контакты, и мы свяжемся с вами в ближайшее время</p>
+      </div>
+      <button type="button" class="modal-close" data-close-modal aria-label="Закрыть">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <form class="modal-form">
+      <input class="form-input" type="text" name="mName" placeholder="Имя" required>
+      <select class="form-input" name="mSphere">
+        <option value="" selected disabled>Выберите сферу услуг</option>
+        <option value="Сайт с нуля">Сайт с нуля</option>
+        <option value="Редизайн сайта">Редизайн сайта</option>
+        <option value="SEO и продвижение">SEO и продвижение</option>
+        <option value="Другое">Другое</option>
+      </select>
+      <input class="form-input" type="tel" name="mPhone" placeholder="Ваш номер" inputmode="tel" required>
+      <textarea class="form-input" name="mTask" placeholder="Расскажите о вашем проекте (необязательно)" rows="4"></textarea>
+      <label class="form-checkbox-label">
+        <input type="checkbox" name="mAgree">
+        <span>Я даю отдельное согласие на обработку персональных данных в соответствии с <a href="privacy-policy.html" target="_blank">Политикой обработки персональных данных</a>. <a href="terms.html" target="_blank">Условия использования</a> размещены отдельно.</span>
+      </label>
+      <span class="form-error" data-agree-error>Необходимо согласие для отправки заявки</span>
+      <div class="modal-social">
+        <a href="https://t.me/nekrasovstudio" target="_blank" rel="noopener" title="Telegram"><svg width="18" height="18" viewBox="0 0 24 24" fill="#5CA7FF"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.02-.14-.07-.2-.09-.06-.22-.04-.31-.02-.13.02-2.28 1.45-6.44 4.25-.61.41-1.16.61-1.66.6-.54-.01-1.6-.31-2.38-.57-.96-.3-1.72-.46-1.65-.97.03-.27.49-.55 1.35-.84 5.3-2.33 8.84-3.87 10.67-4.87.51-.29.96-.48 1.28-.48.26 0 .52.06.75.18z"/></svg></a>
+        <a href="mailto:hello@nekrasovstudio.com" title="Email"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5CA7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></a>
+      </div>
+      <button type="submit" class="btn btn-primary">Обсудить проект</button>
+    </form>
+  </div>
 </div>
 
+<div class="page">
+  <div class="bg-glow bg-glow--page">
+    <div></div>
+    <div></div>
+  </div>
+
+  <div class="page-content">
+
+    <!-- ШАПКА -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <span class="logo__text">Студия
+НЕКРАСОВ</span>
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Главная</a>
+          <a href="services.html">Услуги</a>
+          <a href="portfolio.html">Портфолио</a>
+          <a href="about.html">О нас</a>
+          <a href="pricing.html">Прайс</a>
+          <a href="blog.html">Блог</a>
+          <button type="button" class="btn btn-primary" data-open-modal>Заказать</button>
+        </nav>
+        <button type="button" class="burger" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="mobile-menu">
+          <a href="index.html">Главная</a>
+          <a href="services.html">Услуги</a>
+          <a href="portfolio.html">Портфолио</a>
+          <a href="about.html">О нас</a>
+          <a href="pricing.html">Прайс</a>
+          <a href="blog.html">Блог</a>
+          <button type="button" class="btn btn-primary" data-open-modal>Заказать</button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- 404 -->
+    <section class="notfound-page">
+      <div class="notfound-page__inner">
+        <span class="page-badge">Ошибка 404</span>
+        <h1 class="h1-reveal">404</h1>
+        <h2>Страница не найдена</h2>
+        <p>Похоже, ссылка устарела или страница была перемещена. Проверьте адрес или воспользуйтесь ссылками ниже.</p>
+        <div class="cta-split__actions">
+          <a href="index.html" class="btn btn-primary">Вернуться на главную</a>
+          <a href="portfolio.html" class="btn-outline-pill">Смотреть портфолио</a>
+        </div>
+        <div class="notfound-page__links">
+          <a href="services.html">Услуги</a>
+          <a href="pricing.html">Прайс</a>
+          <a href="blog.html">Блог</a>
+          <a href="about.html">О нас</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- COOKIE-БАННЕР -->
+    <div class="cookie-banner">
+      <div class="cookie-banner__inner">
+        <p>Мы используем cookies, чтобы улучшить работу сайта и аналитику. Продолжая пользоваться сайтом, вы соглашаетесь с <a href="privacy-policy.html" target="_blank">Политикой конфиденциальности</a>.</p>
+        <div class="cookie-banner__actions">
+          <button type="button" class="btn-ghost" data-reject-cookies>Отклонить</button>
+          <button type="button" class="btn btn-primary" data-accept-cookies>Принять</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ФУТЕР -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-logo">
+          <span>Студия</span>
+          <span>НЕКРАСОВ</span>
+        </div>
+        <nav class="footer-nav">
+          <a href="index.html#top">Главная</a>
+          <a href="services.html">Услуги</a>
+          <a href="portfolio.html">Портфолио</a>
+          <a href="about.html">О нас</a>
+          <a href="pricing.html">Прайс</a>
+          <a href="blog.html">Блог</a>
+        </nav>
+        <div class="footer-legal">
+          <a href="privacy-policy.html">Политика конфиденциальности</a>
+          <a href="terms.html">Условия использования</a>
+          <a href="#" data-open-cookie-settings>Настройки cookie</a>
+        </div>
+        <span class="footer-copy">© 2026 Студия Некрасов. Некрасов Ярослав Александрович, плательщик НПД.</span>
+      </div>
+    </footer>
+
+  </div>
+</div>
+
+<script src="lenis.min.js?v=20260827" defer></script>
+<script src="main.js?v=20260827" defer></script>
 </body>
 </html>

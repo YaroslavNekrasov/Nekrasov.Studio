@@ -16,10 +16,14 @@ function sendToWeb3Forms(fields) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  initIntroCleanup();
+  initSmoothScroll();
   initMobileMenu();
   initOrderModal();
   initBlogFilters();
+  initCustomSelect();
   initScrollReveal();
+  initBgParallax();
   initStatCounters();
   initProcessAccordion();
   initFaqAccordion();
@@ -27,6 +31,76 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initProcessCardGlow();
 });
+
+/* ---------- Снятие классов входной анимации после её завершения ---------- */
+/* Без этого animation-fill-mode: both навсегда «замораживает» transform
+   элемента на конечном кадре анимации и глушит все последующие hover-эффекты. */
+function initIntroCleanup() {
+  const introClasses = ['intro', 'intro-hero', 'intro-rise', 'intro-rise-slow', 'intro-pop'];
+  document.querySelectorAll('.intro').forEach((el) => {
+    el.addEventListener('animationend', () => {
+      el.classList.remove(...introClasses);
+    }, { once: true });
+  });
+
+  document.querySelectorAll('.h1-reveal').forEach((el) => {
+    el.addEventListener('animationend', () => {
+      el.classList.remove('h1-reveal');
+    }, { once: true });
+  });
+}
+
+/* ---------- Плавный скролл (Lenis) ---------- */
+function initSmoothScroll() {
+  if (typeof Lenis === 'undefined') return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smoothWheel: true,
+  });
+  window.lenis = lenis;
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+}
+
+/* ---------- Параллакс фоновых пятен-свечений ---------- */
+function initBgParallax() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+
+  const targets = [
+    { el: document.querySelector('.bg-glow__mid-left'), speed: 0.10, base: '' },
+    { el: document.querySelector('.bg-glow__mid-right'), speed: 0.14, base: '' },
+    { el: document.querySelector('.bg-glow__bottom'), speed: 0.08, base: 'translateX(-50%)' },
+    { el: document.querySelector('.bg-glow--page > div:nth-child(1)'), speed: 0.10, base: '' },
+    { el: document.querySelector('.bg-glow--page > div:nth-child(2)'), speed: 0.14, base: '' },
+  ].filter((t) => t.el);
+  if (!targets.length) return;
+
+  function update(scrollY) {
+    targets.forEach((t) => {
+      const offset = scrollY * t.speed;
+      t.el.style.transform = t.base ? `${t.base} translateY(${offset}px)` : `translateY(${offset}px)`;
+    });
+  }
+
+  if (window.lenis) {
+    window.lenis.on('scroll', ({ scroll }) => update(scroll));
+  } else {
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => { update(window.scrollY); ticking = false; });
+    }, { passive: true });
+  }
+}
 
 /* ---------- Фильтр статей в блоге ---------- */
 function initBlogFilters() {
@@ -72,10 +146,12 @@ function initOrderModal() {
     if (e) e.preventDefault();
     overlay.classList.add('is-open');
     document.body.style.overflow = 'hidden';
+    if (window.lenis) window.lenis.stop();
   };
   const close = () => {
     overlay.classList.remove('is-open');
     document.body.style.overflow = '';
+    if (window.lenis) window.lenis.start();
   };
 
   document.querySelectorAll('[data-open-modal]').forEach((el) => el.addEventListener('click', open));
@@ -233,6 +309,94 @@ function initCookieBanner() {
       e.preventDefault();
       banner.classList.remove('is-hidden');
       window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    });
+  });
+}
+
+/* ---------- Кастомный select ---------- */
+/* Нативный список опций select нельзя стилизовать кроссбраузерно (рисуется ОС),
+   поэтому строим свой выпадающий список поверх скрытого select — он остаётся
+   в форме как есть, меняется только то, что видит пользователь. */
+function initCustomSelect() {
+  document.querySelectorAll('select.form-input').forEach((select) => {
+    const wrap = document.createElement('div');
+    wrap.className = 'select-wrap';
+    select.parentNode.insertBefore(wrap, select);
+    wrap.appendChild(select);
+
+    const trigger = document.createElement('button');
+    trigger.type = 'button';
+    trigger.className = 'select-trigger';
+    trigger.setAttribute('aria-haspopup', 'listbox');
+    trigger.setAttribute('aria-expanded', 'false');
+    trigger.innerHTML = '<span class="select-trigger__label"></span><span class="select-trigger__arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span>';
+    wrap.appendChild(trigger);
+    const label = trigger.querySelector('.select-trigger__label');
+
+    const dropdown = document.createElement('div');
+    dropdown.className = 'select-dropdown';
+    dropdown.setAttribute('role', 'listbox');
+    wrap.appendChild(dropdown);
+
+    const options = [...select.options];
+    const optionEls = options.map((opt) => {
+      const el = document.createElement('div');
+      el.className = 'select-option';
+      el.setAttribute('role', 'option');
+      el.textContent = opt.textContent;
+      if (opt.disabled) el.style.display = 'none';
+      dropdown.appendChild(el);
+      return el;
+    });
+
+    function syncFromSelect() {
+      const selected = options[select.selectedIndex];
+      label.textContent = selected ? selected.textContent : '';
+      trigger.classList.toggle('has-value', !!(selected && selected.value));
+      optionEls.forEach((el, i) => el.classList.toggle('is-active', i === select.selectedIndex));
+    }
+    syncFromSelect();
+
+    function close() {
+      wrap.classList.remove('is-open');
+      trigger.setAttribute('aria-expanded', 'false');
+    }
+    function open() {
+      document.querySelectorAll('.select-wrap.is-open').forEach((w) => { if (w !== wrap) w.classList.remove('is-open'); });
+      wrap.classList.add('is-open');
+      trigger.setAttribute('aria-expanded', 'true');
+    }
+
+    trigger.addEventListener('click', () => {
+      if (wrap.classList.contains('is-open')) close(); else open();
+    });
+
+    optionEls.forEach((el, i) => {
+      el.addEventListener('click', () => {
+        select.selectedIndex = i;
+        select.dispatchEvent(new Event('change', { bubbles: true }));
+        syncFromSelect();
+        close();
+      });
+    });
+
+    select.addEventListener('change', syncFromSelect);
+  });
+
+  document.addEventListener('click', (e) => {
+    document.querySelectorAll('.select-wrap.is-open').forEach((wrap) => {
+      if (!wrap.contains(e.target)) {
+        wrap.classList.remove('is-open');
+        wrap.querySelector('.select-trigger')?.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    document.querySelectorAll('.select-wrap.is-open').forEach((wrap) => {
+      wrap.classList.remove('is-open');
+      wrap.querySelector('.select-trigger')?.setAttribute('aria-expanded', 'false');
     });
   });
 }

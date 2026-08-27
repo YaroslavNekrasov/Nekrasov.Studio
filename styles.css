@@ -234,7 +234,7 @@ button { font: inherit; }
 [data-reveal] { opacity: 0; transform: translateY(46px); transition: opacity 1.2s cubic-bezier(.16, .84, .34, 1), transform 1.2s cubic-bezier(.16, .84, .34, 1); }
 [data-reveal].is-visible { opacity: 1; transform: none; }
 
-.intro-hero { animation: hero-in 1.3s cubic-bezier(.16, .84, .34, 1) .4s both; }
+.intro-hero, .h1-reveal { animation: hero-in 1.3s cubic-bezier(.16, .84, .34, 1) .4s both; }
 .intro-rise { animation: rise-in 1s cubic-bezier(.16, .84, .34, 1) .25s both; }
 .intro-rise-slow { animation: rise-in 1.1s cubic-bezier(.16, .84, .34, 1) .6s both; }
 .intro-pop { animation: pop-in 1.1s cubic-bezier(.16, .84, .34, 1) .8s both; }
@@ -527,6 +527,42 @@ button { font: inherit; }
 .form-input::placeholder { color: rgba(255, 255, 255, .34); }
 select.form-input { cursor: pointer; }
 textarea.form-input { resize: vertical; min-height: 120px; }
+
+/* ---------- Кастомный select (нативный список опций нельзя стилизовать кроссбраузерно) ---------- */
+.select-wrap { position: relative; }
+.select-wrap select.form-input {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  opacity: 0; pointer-events: none;
+}
+.select-trigger {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  width: 100%; font-family: var(--font-body); font-size: clamp(15px, 1.1vw, 18px);
+  color: rgba(255, 255, 255, .34); text-align: left;
+  padding: 18px 22px; border-radius: 18px; background: rgba(255, 255, 255, .06);
+  border: 1px solid rgba(255, 255, 255, .14); backdrop-filter: blur(4px);
+  cursor: pointer; transition: border-color .3s, background .3s;
+}
+.select-trigger.has-value { color: #fff; }
+.select-wrap.is-open .select-trigger, .select-trigger:hover { border-color: var(--accent); }
+.select-trigger__arrow { flex: 0 0 auto; display: flex; transition: transform .3s cubic-bezier(.22, .61, .36, 1); }
+.select-wrap.is-open .select-trigger__arrow { transform: rotate(180deg); }
+
+.select-dropdown {
+  position: absolute; left: 0; right: 0; top: calc(100% + 8px); z-index: 20;
+  background: #0b0d18; border: 1px solid rgba(255, 255, 255, .14); border-radius: 18px;
+  padding: 8px; box-shadow: 0 24px 60px rgba(0, 0, 0, .5);
+  max-height: 260px; overflow-y: auto;
+  opacity: 0; transform: translateY(-8px) scale(.98); transform-origin: top center;
+  pointer-events: none; transition: opacity .25s cubic-bezier(.22, .61, .36, 1), transform .25s cubic-bezier(.22, .61, .36, 1);
+}
+.select-wrap.is-open .select-dropdown { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+
+.select-option {
+  padding: 12px 16px; border-radius: 12px; cursor: pointer;
+  font-family: var(--font-body); font-size: 15px; color: rgba(255, 255, 255, .72);
+  transition: background .2s, color .2s;
+}
+.select-option:hover, .select-option.is-active { background: rgba(31, 80, 255, .2); color: #fff; }
 .form-error { display: none; margin-top: 7px; font-size: 14px; color: #ff6b6b; }
 .form-error[data-agree-error] { margin-top: -8px; }
 .form-checkbox-label {
@@ -972,12 +1008,29 @@ textarea.form-input { resize: vertical; min-height: 120px; }
 }
 
 /* ---------- Страница 404 ---------- */
-.notfound-page { min-height: 100vh; display: grid; place-items: center; padding: 24px; text-align: center; }
-.notfound-page main { max-width: 620px; }
-.notfound-page h1 { margin: 0; font-size: clamp(72px, 16vw, 160px); line-height: .9; font-family: var(--font-display); background-image: var(--accent-gradient); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.notfound-page h2 { margin: 28px 0 12px; font-size: clamp(24px, 4vw, 40px); font-family: var(--font-heading); }
-.notfound-page p { margin: 0; color: rgba(255, 255, 255, .65); font-size: 18px; line-height: 1.5; }
-.notfound-page .btn-primary { margin-top: 32px; padding: 16px 28px; }
+.notfound-page {
+  max-width: var(--container); margin: 0 auto; text-align: center;
+  padding: clamp(70px, 10vw, 130px) clamp(20px, 4vw, 40px) clamp(80px, 9vw, 140px);
+  min-height: 62vh; display: flex; flex-direction: column; justify-content: center;
+}
+.notfound-page__inner { max-width: 640px; margin: 0 auto; }
+.notfound-page h1 {
+  margin: 22px 0 0; font-size: clamp(96px, 18vw, 200px); line-height: .85; letter-spacing: -.02em;
+  font-family: var(--font-display); font-weight: 700;
+  background-image: var(--accent-gradient); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.notfound-page h2 { margin: 6px 0 16px; font-size: clamp(24px, 3vw, 36px); font-family: var(--font-heading); font-weight: 600; color: #fff; }
+.notfound-page p { margin: 0 auto; max-width: 460px; color: rgba(255, 255, 255, .65); font-size: clamp(16px, 1.2vw, 18px); line-height: 1.6; }
+.notfound-page .cta-split__actions { justify-content: center; margin-top: 36px; }
+.notfound-page__links {
+  display: flex; justify-content: center; flex-wrap: wrap; gap: 10px 28px;
+  margin-top: 48px; padding-top: 32px; border-top: 1px solid rgba(255, 255, 255, .08);
+}
+.notfound-page__links a {
+  font-family: var(--font-heading); font-weight: 500; font-size: 15px;
+  color: rgba(255, 255, 255, .6); text-decoration: none; transition: color .3s;
+}
+.notfound-page__links a:hover { color: #fff; }
 
 /* ---------- Футер ---------- */
 .site-footer { border-top: 1px solid rgba(255, 255, 255, .07); background: rgba(0, 0, 0, .4); }
