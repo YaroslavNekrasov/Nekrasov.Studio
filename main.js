@@ -75,11 +75,11 @@ function initBgParallax() {
   if (window.matchMedia('(pointer: coarse)').matches) return;
 
   const targets = [
-    { el: document.querySelector('.bg-glow__mid-left'), speed: 0.10, base: '' },
-    { el: document.querySelector('.bg-glow__mid-right'), speed: 0.14, base: '' },
-    { el: document.querySelector('.bg-glow__bottom'), speed: 0.08, base: 'translateX(-50%)' },
-    { el: document.querySelector('.bg-glow--page > div:nth-child(1)'), speed: 0.10, base: '' },
-    { el: document.querySelector('.bg-glow--page > div:nth-child(2)'), speed: 0.14, base: '' },
+    { el: document.querySelector('.bg-glow__mid-left'), speed: 0.20, base: '' },
+    { el: document.querySelector('.bg-glow__mid-right'), speed: 0.28, base: '' },
+    { el: document.querySelector('.bg-glow__bottom'), speed: 0.16, base: 'translateX(-50%)' },
+    { el: document.querySelector('.bg-glow--page > div:nth-child(1)'), speed: 0.20, base: '' },
+    { el: document.querySelector('.bg-glow--page > div:nth-child(2)'), speed: 0.28, base: '' },
   ].filter((t) => t.el);
   if (!targets.length) return;
 
