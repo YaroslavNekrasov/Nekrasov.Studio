@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Почему скорость загрузки влияет на продажи | Блог Студии Некрасов</title>
+<meta name="description" content="Когда вы в последний раз уходили с сайта, потому что он долго грузился? По данным Google, 53% мобильных пользователей покидают страницу, если она грузится дольше 3 секунд.">
+<meta property="og:title" content="Почему скорость загрузки влияет на продажи | Студия Некрасов">
+<meta property="og:description" content="Когда вы в последний раз уходили с сайта, потому что он долго грузился? По данным Google, 53% мобильных пользователей покидают страницу, если она грузится дольше 3 секунд.">
+<link rel="canonical" href="https://nekrasovstudio.com/article-1.html">
+<script id="article-schema" type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Почему скорость загрузки влияет на продажи","description":"Когда вы в последний раз уходили с сайта, потому что он долго грузился? По данным Google, 53% мобильных пользователей покидают страницу, если она грузится дольше 3 секунд.","author":{"@type":"Person","name":"Ярослав Некрасов"},"publisher":{"@type":"Organization","name":"Студия Некрасов"},"mainEntityOfPage":"https://nekrasovstudio.com/article-1.html"}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- МОДАЛЬНАЯ ФОРМА ЗАЯВКИ -->
+<div class="modal-overlay">
+  <div class="modal-box">
+    <div class="modal-head">
+      <div>
+        <h2>Обсудим ваш проект</h2>
+        <p>Оставьте контакты, и мы свяжемся с вами в ближайшее время</p>
+      </div>
+      <button type="button" class="modal-close" data-close-modal aria-label="Закрыть">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <form class="modal-form">
+      <input class="form-input" type="text" name="mName" placeholder="Имя" required>
+      <select class="form-input" name="mSphere">
+        <option value="" selected disabled>Выберите сферу услуг</option>
+        <option value="Сайт с нуля">Сайт с нуля</option>
+        <option value="Редизайн сайта">Редизайн сайта</option>
+        <option value="SEO и продвижение">SEO и продвижение</option>
+        <option value="Другое">Другое</option>
+      </select>
+      <input class="form-input" type="tel" name="mPhone" placeholder="Ваш номер" inputmode="tel" required>
+      <textarea class="form-input" name="mTask" placeholder="Расскажите о вашем проекте (необязательно)" rows="4"></textarea>
+      <label class="form-checkbox-label">
+        <input type="checkbox" name="mAgree">
+        <span>Я даю отдельное согласие на обработку персональных данных в соответствии с <a href="privacy-policy.html" target="_blank">Политикой обработки персональных данных</a>. <a href="terms.html" target="_blank">Условия использования</a> размещены отдельно.</span>
+      </label>
+      <span class="form-error" data-agree-error>Необходимо согласие для отправки заявки</span>
+      <div class="modal-social">
+        <a href="https://t.me/nekrasovstudio" target="_blank" rel="noopener" title="Telegram"><svg width="18" height="18" viewBox="0 0 24 24" fill="#5CA7FF"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.02-.14-.07-.2-.09-.06-.22-.04-.31-.02-.13.02-2.28 1.45-6.44 4.25-.61.41-1.16.61-1.66.6-.54-.01-1.6-.31-2.38-.57-.96-.3-1.72-.46-1.65-.97.03-.27.49-.55 1.35-.84 5.3-2.33 8.84-3.87 10.67-4.87.51-.29.96-.48 1.28-.48.26 0 .52.06.75.18z"/></svg></a>
+        <a href="mailto:hello@nekrasovstudio.com" title="Email"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5CA7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></a>
+      </div>
+      <button type="submit" class="btn btn-primary">Обсудить проект</button>
+    </form>
+  </div>
+</div>
+
+
+<div class="page">
+  <div class="bg-glow bg-glow--page">
+    <div></div>
+    <div></div>
+  </div>
+
+  <div class="page-content">
+
+    <!-- ШАПКА -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <span class="logo__text">Студия
+НЕКРАСОВ</span>
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Главная</a>
+          <a href="services.html">Услуги</a>
+          <a href="portfolio.html">Портфолио</a>
+          <a href="about.html">О нас</a>
+          <a href="pricing.html">Прайс</a>
+          <a href="blog.html" class="is-active">Блог</a>
+          <button type="button" class="btn btn-primary" data-open-modal>Заказать</button>
+        </nav>
+        <button type="button" class="burger" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="mobile-menu">
+          <a href="index.html">Главная</a>
+          <a href="services.html">Услуги</a>
+          <a href="portfolio.html">Портфолио</a>
+          <a href="about.html">О нас</a>
+          <a href="pricing.html">Прайс</a>
+          <a href="blog.html" class="is-active">Блог</a>
+          <button type="button" class="btn btn-primary" data-open-modal>Заказать</button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ЗАГОЛОВОК СТАТЬИ -->
+    <section class="article-hero">
+      <div class="breadcrumbs">
+        <a href="index.html">Главная</a>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg>
+        <a href="blog.html">Блог</a>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg>
+        <span class="breadcrumbs__current">Разработка</span>
+      </div>
+      <span class="page-badge">Разработка</span>
+      <h1>Почему скорость загрузки влияет на продажи</h1>
+      <div class="article-hero-meta">
+        <div class="article-hero-meta__author">
+          <span class="author-avatar">М</span>
+          <span>Максим Некрасов</span>
+        </div>
+        <span class="meta-sep">15 июня 2026</span>
+        <span class="meta-sep">7 мин</span>
+      </div>
+    </section>
+
+    <!-- ОБЛОЖКА -->
+    <section class="article-cover-section">
+      <div class="article-cover">
+        <img src="uploads/blog-speed-min.svg" alt="Обложка статьи: Почему скорость загрузки влияет на продажи" loading="lazy">
+      </div>
+    </section>
+
+    <!-- ТЕКСТ + САЙДБАР -->
+    <section class="article-body-section">
+      <div class="article-content">
+        <p>Когда вы в последний раз уходили с сайта, потому что он долго грузился? Скорее всего — недавно. И ваши клиенты делают то же самое. По данным Google, 53% мобильных пользователей покидают страницу, если она загружается дольше 3 секунд.</p>
+        <p>Каждая секунда задержки снижает конверсию в среднем на 7%. Это не теория — это цифры, которые бизнес теряет ежедневно, пока сайт «думает».</p>
+        <div class="article-quote">
+          <p>Снижение времени загрузки на 0.1 секунды увеличивает конверсию интернет-магазина на 8.4%</p>
+          <cite>— Исследование Deloitte</cite>
+        </div>
+        <h2>Что замедляет ваш сайт</h2>
+        <p>Причин может быть несколько, и часто они накапливаются постепенно. Вот самые распространённые:</p>
+        <div class="article-bullets">
+          <div>Не оптимизированные изображения (PNG вместо WebP, без lazy load)</div>
+          <div>Отсутствие кеширования и CDN</div>
+          <div>Избыточные скрипты и плагины</div>
+          <div>Медленный хостинг без SSD</div>
+        </div>
+        <h2>Как ускорить сайт без полной переделки</h2>
+        <p>Начинать стоит с самых тяжёлых элементов. Обычно первые заметные улучшения дают изображения, шрифты и лишние скрипты — их можно оптимизировать без изменения дизайна.</p>
+        <div class="article-bullets">
+          <div>Перевести крупные изображения в WebP или AVIF</div>
+          <div>Загружать изображения ниже первого экрана лениво</div>
+          <div>Убрать неиспользуемые библиотеки и виджеты</div>
+        </div>
+        <h2>Что проверить после изменений</h2>
+        <p>Проверяйте не только главную страницу, но и мобильную версию ключевых страниц. Важно смотреть на реальное время появления первого экрана и на то, как быстро пользователь может нажать кнопку или открыть меню.</p>
+        <h2>Практический чек-лист для владельца сайта</h2>
+        <p>Откройте сайт с телефона и засеките время до появления первого содержательного блока. Затем сожмите самое тяжёлое изображение и повторите проверку. Даже такой простой тест часто показывает, где скрыта первая точка роста.</p>
+        <p>Не пытайтесь исправить всё сразу. Выберите одну страницу, зафиксируйте текущий результат и меняйте по одному фактору. Так будет понятно, какое действие действительно улучшило скорость и поведение пользователей.</p>
+
+        <div class="article-inline-cta glass-card">
+          <h3>Хотите быстрый сайт?</h3>
+          <p>Проведём бесплатный аудит скорости и покажем, где ваш сайт теряет клиентов.</p>
+          <button type="button" class="btn btn-primary" data-open-modal>Получить аудит бесплатно</button>
+        </div>
+      </div>
+
+      <div class="article-sidebar">
+        <div class="sidebar-card glass-card">
+          <div class="sidebar-card__author">
+            <span class="author-avatar">М</span>
+            <div>
+              <div class="sidebar-card__author-name">Максим Некрасов</div>
+              <div class="sidebar-card__author-role">Основатель · Дизайнер</div>
+            </div>
+          </div>
+          <p>Вникаем в задачу бизнеса и создаём решения под реальные цели клиентов.</p>
+        </div>
+        <div class="sidebar-card glass-card">
+          <div class="sidebar-card__title">Содержание</div>
+          <div class="sidebar-toc">
+            <a href="#">Почему скорость важна</a>
+            <a href="#">Что замедляет сайт</a>
+            <a href="#">Как ускорить</a>
+          </div>
+        </div>
+        <div class="sidebar-card glass-card">
+          <div class="sidebar-card__title">Теги</div>
+          <div class="sidebar-tags">
+            <span class="sidebar-tag">скорость</span>
+            <span class="sidebar-tag">конверсия</span>
+            <span class="sidebar-tag">оптимизация</span>
+            <span class="sidebar-tag">UX</span>
+          </div>
+        </div>
+        <div class="sidebar-promo">
+          <div class="sidebar-promo__title">Нужен сайт?</div>
+          <p>Разработаем сайт, который решает ваши задачи.</p>
+          <button type="button" class="btn btn-primary" data-open-modal>Обсудить проект</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПОХОЖИЕ СТАТЬИ -->
+    <section class="related-section" data-reveal>
+      <div class="divider"></div>
+      <h2>Похожие статьи</h2>
+      <div class="related-grid">
+        <a href="article-2.html" class="related-card glass-card">
+          <div class="related-card__img"><img src="uploads/blog-design-min.svg" alt="Обложка: 5 ошибок дизайна, из-за которых уходят клиенты" loading="lazy"></div>
+          <div class="related-card__body">
+            <span class="page-badge page-badge--sm">Дизайн</span>
+            <h3>5 ошибок дизайна, из-за которых уходят клиенты</h3>
+            <div class="related-card__foot"><span>10 июня 2026</span><span>8 мин</span></div>
+          </div>
+        </a>
+        <a href="article-3.html" class="related-card glass-card">
+          <div class="related-card__img"><img src="uploads/blog-seo-case-min.svg" alt="Обложка: Как мы увеличили трафик автосервиса в 3 раза" loading="lazy"></div>
+          <div class="related-card__body">
+            <span class="page-badge page-badge--sm">Кейс</span>
+            <h3>Как мы увеличили трафик автосервиса в 3 раза</h3>
+            <div class="related-card__foot"><span>3 июня 2026</span><span>9 мин</span></div>
+          </div>
+        </a>
+        <a href="article-4.html" class="related-card glass-card">
+          <div class="related-card__img"><img src="uploads/blog-seo-min.svg" alt="Обложка: SEO: что реально работает, а что давно устарело" loading="lazy"></div>
+          <div class="related-card__body">
+            <span class="page-badge page-badge--sm">SEO</span>
+            <h3>SEO: что реально работает, а что давно устарело</h3>
+            <div class="related-card__foot"><span>28 мая 2025</span><span>10 мин</span></div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ЛИПКАЯ КНОПКА НА МОБИЛЬНЫХ -->
+    <button type="button" class="btn btn-primary sticky-cta" data-open-modal>Обсудить проект<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></button>
+
+    <!-- COOKIE-БАННЕР -->
+    <div class="cookie-banner">
+      <div class="cookie-banner__inner">
+        <p>Мы используем cookies, чтобы улучшить работу сайта и аналитику. Продолжая пользоваться сайтом, вы соглашаетесь с <a href="privacy-policy.html" target="_blank">Политикой конфиденциальности</a>.</p>
+        <div class="cookie-banner__actions">
+          <button type="button" class="btn-ghost" data-reject-cookies>Отклонить</button>
+          <button type="button" class="btn btn-primary" data-accept-cookies>Принять</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ФУТЕР -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-logo">
+          <span>Студия</span>
+          <span>НЕКРАСОВ</span>
+        </div>
+        <nav class="footer-nav">
+          <a href="index.html#top">Главная</a>
+          <a href="services.html">Услуги</a>
+          <a href="portfolio.html">Портфолио</a>
+          <a href="about.html">О нас</a>
+          <a href="pricing.html">Прайс</a>
+          <a href="blog.html">Блог</a>
+        </nav>
+        <div class="footer-legal">
+          <a href="privacy-policy.html">Политика конфиденциальности</a>
+          <a href="terms.html">Условия использования</a>
+          <a href="#" data-open-cookie-settings>Настройки cookie</a>
+        </div>
+        <span class="footer-copy">© 2026 Студия Некрасов. Некрасов Ярослав Александрович, плательщик НПД.</span>
+      </div>
+    </footer>
+
+  </div>
+</div>
+
+<script src="main.js" defer></script>
+</body>
+</html>
