@@ -1,11 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#1F50FF"/>
-      <stop offset="1" stop-color="#5CA7FF"/>
-    </linearGradient>
-  </defs>
-  <rect width="64" height="64" rx="18" fill="#05060e"/>
-  <rect width="64" height="64" rx="18" fill="url(#g)" fill-opacity="0.18"/>
-  <text x="32" y="45" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="34" text-anchor="middle" fill="url(#g)">H</text>
+<svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="58" height="58" rx="29" fill="url(#paint0_linear_358_613)"/>
+<path d="M19.68 20H24.648V38H19.68V20ZM33.84 20H38.832V38H33.84V20ZM22.464 26.648H35.904V31.064H22.464V26.648Z" fill="white"/>
+<defs>
+<linearGradient id="paint0_linear_358_613" x1="19.1678" y1="-4.74042" x2="74.4273" y2="0.36919" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1F50FF"/>
+<stop offset="1" stop-color="#5CA7FF"/>
+</linearGradient>
+</defs>
 </svg>

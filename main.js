@@ -43,9 +43,9 @@ function initIntroCleanup() {
     }, { once: true });
   });
 
-  document.querySelectorAll('.h1-reveal').forEach((el) => {
+  document.querySelectorAll('.h1-reveal, .p-reveal').forEach((el) => {
     el.addEventListener('animationend', () => {
-      el.classList.remove('h1-reveal');
+      el.classList.remove('h1-reveal', 'p-reveal');
     }, { once: true });
   });
 }
